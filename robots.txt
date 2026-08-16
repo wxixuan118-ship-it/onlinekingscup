@@ -1,0 +1,9 @@
+# robots.txt — Kings Cup Online
+# https://www.onlinekingscup.com
+
+User-agent: *
+Allow: /
+Disallow:
+
+# Sitemap
+Sitemap: https://www.onlinekingscup.com/sitemap.xml

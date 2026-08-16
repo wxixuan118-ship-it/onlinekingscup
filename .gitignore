@@ -1,0 +1,7 @@
+.vercel/
+.DS_Store
+*.zip
+AGENTS.md
+Kings_Cup_Online_PRD.md
+backlink-campaign-tracker.csv
+backlink-submission-pack.md

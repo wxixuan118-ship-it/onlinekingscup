@@ -131,6 +131,13 @@ h2.section-title {
   margin-bottom: 36px;
   line-height: 1.7;
 }
+.topic-intro { max-width: 820px; }
+.topic-intro > p { color: var(--text-mid); margin-bottom: 18px; line-height: 1.8; }
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 28px 0; }
+.topic-card { padding: 22px; border: 1px solid var(--border); border-radius: 14px; background: var(--white); box-shadow: var(--shadow-sm); }
+.topic-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.topic-card p { color: var(--text-light); font-size: .93rem; line-height: 1.65; }
+@media (max-width: 760px) { .topic-grid { grid-template-columns: 1fr; } }
 
 /* ──────────────────────────────────
    HEADER / NAV
@@ -796,6 +803,40 @@ footer {
       💡 <strong>Host Tip:</strong> For the best Kings Cup experience, designate one person to tap "Draw Card" each round, then pass the phone after each draw. This keeps turns fair and the game moving fast.
     </div>
     <p style="margin-top:22px;">Need the full table setup and turn sequence? Read <a href="/how-to-play-kings-cup/"><strong>how to play King's Cup</strong></a>, including physical-deck and remote-play instructions.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     KINGS CUP TOPIC INTRODUCTION
+════════════════════════════════ -->
+<section class="section section--tint" id="what-is-kings-cup">
+  <div class="container topic-intro">
+    <span class="section-label">The Classic Party Card Game</span>
+    <h2 class="section-title">What Is Kings Cup?</h2>
+    <p>
+      <strong>Kings Cup</strong> is a social card game in which players draw from a shuffled deck and follow a different rule for each card rank. It is also known as Ring of Fire, Circle of Death, and Waterfall in different regions. The game is easy to start because there is no score sheet or complicated board: all you need is a standard deck, a group of players, and an agreed set of card meanings. Alcohol is optional, and every drinking instruction can be replaced with points, trivia, mocktails, or short challenges.
+    </p>
+    <p>
+      Players take turns drawing one card at a time. Number cards usually trigger quick actions such as Floor, Heaven, Rhyme, Mate, or Categories, while face cards can create longer roles such as Question Master. The Kings build toward the game's finale: traditionally, the first three King drawers contribute to a center cup and the fourth King drawer completes the agreed final action. Before starting, the group should review the <a href="/kings-cup-rules/"><strong>complete Kings Cup rules</strong></a> and choose safe alternatives that work for everyone.
+    </p>
+    <div class="topic-grid">
+      <div class="topic-card">
+        <h3>How to Play</h3>
+        <p>Set up the deck, choose a turn order, draw clockwise, and complete each card's action before the next turn.</p>
+      </div>
+      <div class="topic-card">
+        <h3>Card Meanings</h3>
+        <p>Ace through King each have a common rule. Use the <a href="/kings-cup-cards/">Kings Cup card meanings</a> chart for a fast reference.</p>
+      </div>
+      <div class="topic-card">
+        <h3>Game Variations</h3>
+        <p>Classic, short, remote, two-player, family, and non-drinking versions keep the same simple draw-and-follow loop.</p>
+      </div>
+    </div>
+    <p>
+      House rules are part of Kings Cup, so exact meanings can vary from one group to another. Some groups replace Jack with Make a Rule, change the rules for 5 and 6, or use a challenge bowl instead of a mixed center cup. The important part is agreeing on the deck before the first draw. Explore more <a href="/kings-cup-variations/">Kings Cup variations</a>, read the full <a href="/how-to-play-kings-cup/">how-to-play guide</a>, or start the game instantly below.
+    </p>
+    <button class="btn-primary" onclick="openGame('home')">▶ Play Kings Cup Free</button>
   </div>
 </section>
 

@@ -93,6 +93,11 @@ header {
   font-weight: 800; font-size: 1.05rem; color: var(--text); text-decoration: none;
 }
 .nav-logo-icon { font-size: 1.4rem; }
+.breadcrumb { max-width: 1080px; margin: 0 auto; padding: 12px 20px; font-size: .85rem; color: var(--text-light); line-height: 1.5; }
+.breadcrumb a { color: var(--text-light); text-decoration: none; padding: 0; border-radius: 0; font-size: inherit; font-weight: inherit; }
+.breadcrumb a:hover { text-decoration: underline; background: none; color: var(--brand); }
+.breadcrumb .sep { margin: 0 7px; opacity: .5; }
+.breadcrumb [aria-current="page"] { color: var(--text); font-weight: 650; }
 nav { display: flex; align-items: center; gap: 4px; }
 nav a {
   color: var(--text-mid); font-size: 0.88rem; font-weight: 500;
@@ -292,6 +297,7 @@ footer { background: #111; color: rgba(255,255,255,0.5); padding: 40px 20px 28px
   .stat:last-child { border-bottom: none; }
 }
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kings Cup Online","item":"https://www.onlinekingscup.com/"},{"@type":"ListItem","position":2,"name":"Ring of Fire Rules","item":"https://www.onlinekingscup.com/ring-of-fire-rules.html"}]}</script>
 </head>
 <body>
 
@@ -309,6 +315,8 @@ footer { background: #111; color: rgba(255,255,255,0.5); padding: 40px 20px 28px
     </nav>
   </div>
 </header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span aria-current="page">Ring of Fire Rules</span></nav>
 
 <main>
 
@@ -492,19 +500,8 @@ footer { background: #111; color: rgba(255,255,255,0.5); padding: 40px 20px 28px
       </div>
 
       <h2>Ring of Fire vs Kings Cup — What's the Difference?</h2>
-      <p>Nothing — they are the exact same game. The name varies by country:</p>
-      <table class="compare-table">
-        <thead>
-          <tr><th>Name</th><th>Common Region</th><th>Rules</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Ring of Fire</strong></td><td>UK, Ireland, Australia</td><td>Identical</td></tr>
-          <tr><td><strong>Kings Cup</strong></td><td>USA, Canada</td><td>Identical</td></tr>
-          <tr><td><strong>Circle of Death</strong></td><td>USA (college)</td><td>Identical</td></tr>
-          <tr><td><strong>King's Game</strong></td><td>Europe</td><td>Minor variations</td></tr>
-        </tbody>
-      </table>
-      <p>Our online game uses "Kings Cup" as the name but follows the exact same card rules as Ring of Fire. All 5 game modes work for both names.</p>
+      <p>Same game, same core loop. "Ring of Fire" is the common name in the UK, Ireland and Australia; "Kings Cup" is used in the US and Canada; "Circle of Death" is the US college name. A few card actions (5, 6, Jack, Ace), the broken-circle penalty and the fourth-King finale change by house rules — not by which name you use.</p>
+      <p>Our online game runs under the name "Kings Cup" but follows the same card rules described here. For a full side-by-side breakdown of names, regions and house-rule differences, see <a href="/kings-cup-vs-ring-of-fire/">Kings Cup vs Ring of Fire</a>.</p>
 
       <h2>Popular Ring of Fire Variations</h2>
       <p>House rules are a huge part of Ring of Fire's appeal. Here are the most popular card rule swaps:</p>
@@ -529,7 +526,7 @@ footer { background: #111; color: rgba(255,255,255,0.5); padding: 40px 20px 28px
       <div class="faq-list">
         <div class="faq-item">
           <h3>Is Ring of Fire the same as Kings Cup?</h3>
-          <p>Yes — identical game, different names. Ring of Fire is the common UK name; Kings Cup is used in the US. Circle of Death is another name for the same game.</p>
+          <p>Yes — same game, same core loop, different regional names. Ring of Fire is the common UK name; Kings Cup is used in the US; Circle of Death is the US college name. A few card actions change by house rules, not by which name you use. See <a href="/kings-cup-vs-ring-of-fire/">Kings Cup vs Ring of Fire</a> for the full comparison.</p>
         </div>
         <div class="faq-item">
           <h3>How many people do you need to play Ring of Fire?</h3>

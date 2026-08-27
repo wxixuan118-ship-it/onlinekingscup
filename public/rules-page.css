@@ -1,0 +1,54 @@
+.rules-cheat-sheet {
+  margin: 28px auto 38px;
+  max-width: 620px;
+}
+
+.rules-cheat-sheet img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 14px 36px rgba(23, 13, 54, .18);
+}
+
+.rules-cheat-sheet figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: .88rem;
+  text-align: center;
+}
+
+.content h4 {
+  margin: 12px 0 4px;
+  color: #3d278f;
+  font-size: .96rem;
+}
+
+.content h4 + p {
+  margin-top: 0;
+  padding: 10px 14px;
+  border-left: 3px solid #b9a7ff;
+  background: var(--tint);
+}
+
+.play-cta {
+  margin-top: 48px;
+  padding: 34px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #160d31, #382184);
+  color: white;
+  text-align: center;
+}
+
+.play-cta h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  border: 0;
+  color: white;
+}
+
+.play-cta p {
+  max-width: 580px;
+  margin: 0 auto 20px;
+  color: rgba(255, 255, 255, .8);
+}

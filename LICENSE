@@ -1,0 +1,30 @@
+Copyright (c) 2026 Kings Cup Online. All rights reserved.
+
+This repository contains the source of the website published at
+https://www.onlinekingscup.com/ — both its game implementation and its written
+content: the rules guides, card-by-card explanations, variation and setup
+articles, and all accompanying text, images, and design.
+
+NO LICENSE IS GRANTED.
+
+You may not copy, reproduce, republish, distribute, mirror, modify, translate,
+or create derivative works from any part of this repository, in whole or in
+part, without prior written permission from the copyright holder. This applies
+to the written content in particular, including reproduction on other websites
+and republication in any other medium.
+
+Reading the source here, and playing the game at onlinekingscup.com, are fine.
+Nothing beyond that is permitted.
+
+EXCEPTION — the game itself is separately available under MIT
+
+The playable Kings Cup game is also distributed as a standalone open source
+project under the MIT License:
+
+    https://github.com/wxixuan118-ship-it/kings-cup-game
+
+If you want to use, modify, or redistribute the game, use that repository. That
+MIT grant covers the game implementation only. It does not extend to any of the
+written content in this repository, which remains fully reserved.
+
+Contact: https://www.onlinekingscup.com/about.html

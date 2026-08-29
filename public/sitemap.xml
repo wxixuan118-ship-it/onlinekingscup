@@ -59,6 +59,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://www.onlinekingscup.com/app-privacy-policy.html</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 
   <url>
     <loc>https://www.onlinekingscup.com/terms-of-use.html</loc>

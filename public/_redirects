@@ -1,8 +1,0 @@
-# Cloudflare Pages redirects. One rule per line: <from> <to> <status>
-# Host-level rules (HTTP->HTTPS, non-www -> www) are NOT handled here;
-# they belong in the Cloudflare dashboard as Redirect Rules.
-
-# The Ring of Fire guide duplicated the full Ace-to-King sheet already on
-# /kings-cup-rules/. Its unique content (the ring, the broken-ring penalty)
-# was merged into that page at #the-ring before this redirect was added.
-/ring-of-fire-rules.html    /kings-cup-rules/    301

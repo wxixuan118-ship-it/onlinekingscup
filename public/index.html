@@ -164,6 +164,37 @@ nav a:hover { background: var(--brand-light); color: var(--brand); text-decorati
 }
 .nav-play:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(245,166,35,0.45) !important; background: linear-gradient(135deg, #f5a623,#e8890d) !important; }
 
+/* Nav dropdown */
+.nav-dropdown { position: relative; }
+.nav-dropdown > summary {
+  list-style: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--text-mid); font-size: 0.88rem; font-weight: 500;
+  padding: 6px 12px; border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-dropdown > summary::-webkit-details-marker { display: none; }
+.nav-dropdown > summary:hover { background: var(--brand-light); color: var(--brand); }
+.nav-dropdown > summary::after {
+  content: ""; width: 6px; height: 6px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+.nav-dropdown[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.nav-dropdown-menu {
+  position: absolute; top: calc(100% + 12px); right: 0;
+  min-width: 168px; padding: 6px;
+  background: #fff; border: 1px solid var(--border); border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(23,13,54,0.14);
+  z-index: 901;
+}
+.nav-dropdown-menu a { display: block; white-space: nowrap; }
+
+.mobile-nav-label {
+  padding: 12px 12px 4px; font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-light);
+}
+
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; cursor: pointer; padding: 4px;
@@ -693,6 +724,12 @@ footer {
       <a href="#" onclick="event.preventDefault(); openGame('home')">Game</a>
       <a href="/kings-cup-card-game/">Guide</a>
       <a href="/kings-cup-rules/">Rule</a>
+      <details class="nav-dropdown">
+        <summary>Other Games</summary>
+        <div class="nav-dropdown-menu">
+          <a href="/beer-pong/">Beer Pong</a>
+        </div>
+      </details>
     </nav>
     <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -702,6 +739,8 @@ footer {
     <a href="#" onclick="event.preventDefault(); closeMobileNav(); openGame('home')">Game</a>
     <a href="/kings-cup-card-game/" onclick="closeMobileNav()">Guide</a>
     <a href="/kings-cup-rules/" onclick="closeMobileNav()">Rule</a>
+    <span class="mobile-nav-label">Other Games</span>
+    <a href="/beer-pong/" onclick="closeMobileNav()">Beer Pong</a>
   </div>
 </header>
 
@@ -1085,6 +1124,7 @@ footer {
         <a href="/kings-cup-variations/">Variations</a>
         <a href="#versions">Game Versions</a>
         <a href="/kings-cup-questions/">Kings Cup Questions</a>
+        <a href="/beer-pong/">Beer Pong Rules</a>
         <a href="party-games-presale.html">PartyDeck Presale</a>
         <a href="partners.html">Partners</a>
         <a href="about.html">About</a>

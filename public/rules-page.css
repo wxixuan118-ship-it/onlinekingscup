@@ -52,3 +52,91 @@
   margin: 0 auto 20px;
   color: rgba(255, 255, 255, .8);
 }
+
+.hero .byline {
+  margin: 18px auto 0;
+  color: rgba(255, 255, 255, .6);
+  font-size: .84rem;
+}
+
+.sheet-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0 0;
+}
+
+.sheet-action {
+  font: inherit;
+  font-size: .88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  background: var(--tint);
+  color: #5738db;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sheet-action:hover {
+  border-color: var(--brand);
+  background: #efeaff;
+}
+
+.content .disclaimer {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+@media print {
+  header,
+  .toc,
+  footer,
+  .breadcrumb,
+  .sheet-actions,
+  .play-cta,
+  .related,
+  .hero .button {
+    display: none !important;
+  }
+
+  .hero {
+    padding: 0 0 18px;
+    color: #000;
+    background: none;
+    text-align: left;
+  }
+
+  .hero .eyebrow,
+  .hero p,
+  .hero .byline {
+    color: #444;
+  }
+
+  .layout {
+    display: block;
+    padding: 0;
+  }
+
+  .content {
+    max-width: none;
+  }
+
+  .rules-cheat-sheet img {
+    box-shadow: none;
+  }
+
+  a[href^="/"]::after {
+    content: "";
+  }
+}
+
+/* Let the 4-column card table scroll inside .table-wrap instead of widening
+   the grid column on narrow viewports. */
+.content {
+  min-width: 0;
+}

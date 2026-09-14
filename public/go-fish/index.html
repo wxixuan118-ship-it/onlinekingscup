@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Go Fish Card Game: Play Online Free &amp; Rules</title>
+<meta name="description" content="Play Go Fish online free, no download. Then read the full Go Fish rules: how many cards to deal, how a turn works, books, 2-player rules, variations and FAQ.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.onlinekingscup.com/go-fish/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Go Fish Card Game: Play Online Free &amp; Rules">
+<meta property="og:description" content="Play Go Fish in your browser against computer opponents, then learn the rules: the deal, asking for ranks, books, 2-player play and the usual house variations.">
+<meta property="og:url" content="https://www.onlinekingscup.com/go-fish/">
+<meta property="og:image" content="https://www.onlinekingscup.com/images/go-fish-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Go Fish card game: a book of four sevens fanned out next to the words Play online free and learn the rules">
+<meta property="og:site_name" content="Kings Cup Online">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-09-14T00:00:00+00:00">
+<meta property="article:modified_time" content="2026-09-14T00:00:00+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Go Fish Card Game: Play Online Free &amp; Rules">
+<meta name="twitter:description" content="Play Go Fish in your browser against computer opponents, then learn the rules: the deal, asking for ranks, books, 2-player play and house variations.">
+<meta name="twitter:image" content="https://www.onlinekingscup.com/images/go-fish-og.png">
+<link rel="stylesheet" href="/seo-pages.css">
+<link rel="stylesheet" href="/rules-page.css">
+<style>
+/* ---------- Go Fish game board ---------- */
+.gf [hidden]{display:none!important}
+.gf{max-width:1080px;margin:-40px auto 0;padding:0 20px;position:relative;z-index:2}
+.gf-panel{background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:0 18px 48px rgba(23,13,54,.16);overflow:hidden}
+.gf-panel-head{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;padding:16px 22px;border-bottom:1px solid var(--border);background:var(--tint)}
+.gf-panel-head h2{margin:0;font-size:1.15rem;border:0;padding:0}
+.gf-panel-head p{margin:0;font-size:.88rem;color:var(--muted)}
+.gf-setup{padding:26px 22px 30px;display:grid;gap:18px;max-width:560px}
+.gf-setup fieldset{border:0;margin:0;padding:0}
+.gf-setup legend{font-weight:750;margin-bottom:8px}
+.gf-seg{display:inline-flex;border:1px solid var(--border);border-radius:99px;overflow:hidden;background:#fff}
+.gf-seg label{padding:9px 18px;cursor:pointer;font-weight:700;color:#414153}
+.gf-seg input{position:absolute;opacity:0;width:0;height:0}
+.gf-seg input:checked+span{color:#fff}
+.gf-seg label:has(input:checked){background:var(--brand);color:#fff}
+.gf-seg label:focus-within{outline:2px solid var(--gold);outline-offset:2px}
+.gf-check{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;color:#414153}
+.gf-check input{margin-top:5px;width:18px;height:18px;accent-color:var(--brand)}
+.gf-deal{font:inherit;font-weight:850;font-size:1.05rem;border:0;cursor:pointer;background:linear-gradient(135deg,#ffd84d,#f39a18);color:#21173b;padding:14px 28px;border-radius:99px;justify-self:start}
+.gf-record{font-size:.85rem;color:var(--muted);margin:0}
+.gf-board{position:relative;background:radial-gradient(ellipse at top,#2c6e4f,#154232 70%);padding:18px 18px 22px;color:#fff}
+.gf-opponents{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.gf-opp{font:inherit;color:#fff;background:rgba(255,255,255,.08);border:2px solid transparent;border-radius:14px;padding:10px 14px;min-width:150px;text-align:center;cursor:default;display:grid;gap:8px;transition:border-color .15s,background .15s}
+.gf-opp.active{border-color:#ffd45b;background:rgba(255,212,91,.14)}
+.gf-opp.target{border-color:#fff;background:rgba(255,255,255,.22)}
+.gf-opp.empty{opacity:.55}
+.gf-opponents.choose .gf-opp{cursor:pointer;animation:gf-pulse 1.4s ease-in-out infinite}
+@keyframes gf-pulse{50%{box-shadow:0 0 0 6px rgba(255,255,255,.14)}}
+.gf-opp-head{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.gf-avatar{font-size:1.4rem}
+.gf-opp-name{font-weight:800}
+.gf-opp-count{font-size:.8rem;opacity:.8}
+.gf-backs{display:flex;justify-content:center;height:34px}
+.gf-back{width:24px;height:34px;border-radius:4px;background:repeating-linear-gradient(45deg,#6c47ff 0 3px,#4d2fd1 3px 6px);border:2px solid #fff;margin-left:-10px;box-shadow:0 2px 4px rgba(0,0,0,.3)}
+.gf-back:first-child{margin-left:0}
+.gf-opp-books,.gf-books{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;min-height:24px}
+.gf-book{display:inline-flex;align-items:baseline;gap:2px;background:#fff;color:#1a1a2e;font-weight:850;font-size:.82rem;padding:2px 8px;border-radius:99px}
+.gf-book small{font-weight:600;opacity:.6;font-size:.7rem}
+.gf-nobooks{font-size:.78rem;opacity:.65}
+.gf-middle{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;margin:20px auto;max-width:720px}
+.gf-stock{position:relative;width:64px;height:90px;border-radius:8px;background:repeating-linear-gradient(45deg,#6c47ff 0 4px,#4d2fd1 4px 8px);border:3px solid #fff;box-shadow:4px 4px 0 #2b1f6b,8px 8px 0 #1f1650;display:grid;place-items:center;text-align:center;font-size:.7rem;line-height:1.2}
+.gf-stock strong{display:block;font-size:1.3rem}
+.gf-stock.empty{background:rgba(255,255,255,.12);box-shadow:none;border-style:dashed}
+.gf-bubble{background:#fff;color:#1a1a2e;border-radius:16px;padding:14px 18px;font-size:1rem;line-height:1.5;position:relative;min-height:54px;margin:0}
+.gf-bubble::before{content:"";position:absolute;left:-10px;top:50%;margin-top:-8px;border:8px solid transparent;border-right-color:#fff;border-left:0}
+.gf-you{background:rgba(0,0,0,.22);border-radius:16px;padding:14px 16px 16px}
+.gf-you-head{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;margin-bottom:10px}
+.gf-you-head strong{font-size:1rem}
+.gf-you-head span{font-size:.85rem;opacity:.8}
+.gf-hand{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;min-height:96px;padding:4px 0}
+.gf-hand.disabled .gf-card{cursor:default}
+.gf-card{font:inherit;position:relative;width:64px;height:90px;border-radius:8px;background:#fff;color:#1a1a2e;border:2px solid #d8d8e6;cursor:pointer;padding:0;box-shadow:0 3px 8px rgba(0,0,0,.3);transition:transform .12s,border-color .12s}
+.gf-card.red{color:#d3222a}
+.gf-card-corner{position:absolute;top:4px;left:6px;font-size:.9rem;font-weight:850;line-height:1;text-align:left}
+.gf-card-pip{position:absolute;right:6px;bottom:4px;font-size:1.7rem;line-height:1}
+.gf-card.selected{border-color:var(--gold);transform:translateY(-10px);box-shadow:0 0 0 3px var(--gold),0 8px 16px rgba(0,0,0,.35)}
+.gf-hand:not(.disabled) .gf-card:hover{transform:translateY(-6px)}
+.gf-card.selected:hover{transform:translateY(-10px)}
+.gf-empty-hand{margin:auto;opacity:.7}
+.gf-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;margin-top:12px}
+.gf-ask{font:inherit;font-weight:850;font-size:1rem;border:0;cursor:pointer;background:linear-gradient(135deg,#ffd84d,#f39a18);color:#21173b;padding:13px 26px;border-radius:99px;min-width:220px}
+.gf-ask:disabled{background:rgba(255,255,255,.25);color:rgba(255,255,255,.7);cursor:not-allowed}
+.gf-hint{width:100%;text-align:center;font-size:.88rem;opacity:.85;margin:0;min-height:1.3em}
+.gf-restart{font:inherit;font-size:.85rem;background:none;border:1px solid rgba(255,255,255,.45);color:#fff;padding:9px 16px;border-radius:99px;cursor:pointer}
+.gf-log-wrap{margin-top:16px;font-size:.85rem}
+.gf-log-wrap summary{cursor:pointer;opacity:.85}
+.gf-log{list-style:none;margin:8px 0 0;padding:10px 14px;max-height:160px;overflow-y:auto;background:rgba(0,0,0,.25);border-radius:10px}
+.gf-log li{padding:2px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.gf-overlay{position:absolute;inset:0;background:rgba(10,6,28,.82);display:grid;place-items:center;padding:20px;z-index:3}
+.gf-result{background:#fff;color:#1a1a2e;border-radius:18px;padding:26px 28px;max-width:360px;width:100%;text-align:center}
+.gf-result h3{margin:0 0 12px;font-size:1.6rem}
+.gf-scores{list-style:none;margin:0 0 18px;padding:0;text-align:left}
+.gf-scores li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)}
+.gf-result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.gf-result .gf-restart{color:#5738db;border-color:var(--border)}
+.gf-result .gf-ask{min-width:0}
+@media(max-width:600px){.gf{margin-top:-28px;padding:0 12px}.gf-board{padding:14px 10px 18px}.gf-opp{min-width:120px;padding:8px 10px}.gf-card{width:52px;height:74px}.gf-card-pip{font-size:1.4rem}.gf-middle{grid-template-columns:auto 1fr;gap:12px}.gf-stock{width:52px;height:74px}.gf-bubble{font-size:.92rem;padding:12px 14px}}
+.hero.hero-game{padding-bottom:80px}
+.hero .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero .button.ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kings Cup Online","item":"https://www.onlinekingscup.com/"},{"@type":"ListItem","position":2,"name":"Go Fish","item":"https://www.onlinekingscup.com/go-fish/"}]},{"@type":"VideoGame","@id":"https://www.onlinekingscup.com/go-fish/#game","name":"Go Fish Online","url":"https://www.onlinekingscup.com/go-fish/","image":"https://www.onlinekingscup.com/images/go-fish-og.png","description":"Free browser version of the Go Fish card game. Play against one to three computer opponents with standard rules: ask for a rank you hold, collect books of four, most books wins.","genre":["Card Game","Family Game"],"gamePlatform":"Web Browser","applicationCategory":"GameApplication","operatingSystem":"Any","playMode":"SinglePlayer","numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":4},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Kings Cup Online","url":"https://www.onlinekingscup.com/"},"publisher":{"@type":"Organization","name":"Kings Cup Online","url":"https://www.onlinekingscup.com/"},"inLanguage":"en"},{"@type":"Article","@id":"https://www.onlinekingscup.com/go-fish/#article","headline":"Go Fish Card Game: Play Online Free & Rules","description":"Play Go Fish online free, then learn the rules: how many cards to deal, how a turn works, books, running out of cards, two-player rules, house variations, strategy and FAQ.","mainEntityOfPage":"https://www.onlinekingscup.com/go-fish/","inLanguage":"en","datePublished":"2026-09-14","dateModified":"2026-09-14","author":{"@type":"Organization","name":"Kings Cup Online","url":"https://www.onlinekingscup.com/"},"publisher":{"@type":"Organization","name":"Kings Cup Online","url":"https://www.onlinekingscup.com/"},"image":{"@type":"ImageObject","url":"https://www.onlinekingscup.com/images/go-fish-og.png","width":1200,"height":630,"caption":"Go Fish card game: a book of four sevens"},"about":[{"@type":"Game","name":"Go Fish","alternateName":["Fish","Authors"]}]},{"@type":"HowTo","name":"How to Play Go Fish","description":"Go Fish setup, the turn procedure and how the game ends, for two to six players with a standard deck.","totalTime":"PT15M","supply":[{"@type":"HowToSupply","name":"One standard 52-card deck with the jokers removed"}],"step":[{"@type":"HowToStep","name":"Deal the cards","text":"Deal 7 cards each with two or three players, or 5 cards each with four or more. Spread the rest face down in the middle as the pond.","url":"https://www.onlinekingscup.com/go-fish/#setup"},{"@type":"HowToStep","name":"Ask for a rank you hold","text":"On your turn, ask one other player for a rank you already have at least one card of, for example \"Do you have any sevens?\"","url":"https://www.onlinekingscup.com/go-fish/#turns"},{"@type":"HowToStep","name":"Take the cards or go fish","text":"If they have any cards of that rank they hand all of them over and you take another turn. If not, they say \"Go Fish!\" and you draw the top card of the pond. Drawing the rank you asked for earns another turn.","url":"https://www.onlinekingscup.com/go-fish/#turns"},{"@type":"HowToStep","name":"Lay down books","text":"Whenever you hold all four cards of one rank, place them face up in front of you as a book. A player with no cards left draws one from the pond on their next turn.","url":"https://www.onlinekingscup.com/go-fish/#ending"},{"@type":"HowToStep","name":"Finish and count books","text":"The game ends when all thirteen books have been made. The player with the most books wins.","url":"https://www.onlinekingscup.com/go-fish/#ending"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many cards do you deal in Go Fish?","acceptedAnswer":{"@type":"Answer","text":"Deal 7 cards each with two or three players and 5 cards each with four or more. The rest go face down in the middle as the pond. Some households deal 7 to everyone regardless of numbers, which works fine as long as everyone gets the same amount."}},{"@type":"Question","name":"Can you play Go Fish with 2 players?","acceptedAnswer":{"@type":"Answer","text":"Yes. Deal 7 cards each and play with the standard rules. Because there is only one opponent to ask, the game is about remembering which ranks they have asked for and which ones they have said Go Fish to. Two-player games can run long, so many people play to a set number of books."}},{"@type":"Question","name":"Can you ask for a card you don’t have?","acceptedAnswer":{"@type":"Answer","text":"No. You may only ask for a rank you already hold at least one card of. This is the rule that makes asking risky, because every question tells the other players something about your hand."}},{"@type":"Question","name":"Do you get another turn if you draw the card you asked for?","acceptedAnswer":{"@type":"Answer","text":"In the most common rules, yes: if the card you fish from the pond is the rank you just asked for, you show it and take another turn. Some families skip this rule and end the turn after any Go Fish. Decide before you start."}},{"@type":"Question","name":"What happens when you run out of cards?","acceptedAnswer":{"@type":"Answer","text":"You stay in the game. On your next turn, draw one card from the pond and ask for that rank. If the pond is empty as well, you sit out until the game ends and still count the books you have already made. Some house rules let you draw a full new hand instead of a single card."}},{"@type":"Question","name":"How does the game end and who wins?","acceptedAnswer":{"@type":"Answer","text":"The game ends when all thirteen books have been laid down, or when the pond is empty and nobody has cards left. The player with the most books wins. Each book counts as one point regardless of rank."}},{"@type":"Question","name":"What is a book?","acceptedAnswer":{"@type":"Answer","text":"A book is a set of all four cards of one rank, such as the four Kings. As soon as you hold a complete book you place it face up in front of you, and it can no longer be asked for. There are thirteen books in a standard deck."}},{"@type":"Question","name":"Is Go Fish a game of luck or skill?","acceptedAnswer":{"@type":"Answer","text":"Both. The deal and the draws are luck, but who to ask and what to ask for is skill. Players who remember every request and every Go Fish answer win far more often than players who ask at random, which is why the game holds up for adults as well as children."}},{"@type":"Question","name":"What age is Go Fish suitable for?","acceptedAnswer":{"@type":"Answer","text":"Most children can play from around age four, especially with a picture deck or by collecting pairs instead of books. Reading is not required as long as the ranks are recognisable, and the rules take about a minute to explain."}},{"@type":"Question","name":"Do you need a special deck?","acceptedAnswer":{"@type":"Answer","text":"No. Any standard 52-card deck works, with the jokers removed. Themed Go Fish decks with fish or animal pictures are sold for young children, and they play exactly the same way using matching pictures instead of ranks."}}]}]}</script>
+<link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"></head>
+<body>
+<header>
+  <div class="nav">
+    <a class="logo" href="/">&#9819; Kings Cup Online</a>
+    <nav class="links">
+      <a href="/">Game</a>
+      <a href="/kings-cup-card-game/">Guide</a>
+      <a href="/kings-cup-rules/">Rule</a>
+      <details class="nav-dropdown"><summary>Other Games</summary><div class="nav-dropdown-menu"><a href="/beer-pong/">Beer Pong</a><a href="/go-fish/" aria-current="page">Go Fish</a></div></details>
+      <a class="play" href="/party-games-presale.html">App</a>
+    </nav>
+  </div>
+</header><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span aria-current="page">Go Fish</span></nav>
+<main>
+  <section class="hero hero-game">
+    <div class="eyebrow">Free online card game &middot; 2&ndash;4 players</div>
+    <h1>Go Fish Card Game: Play Online &amp; Learn the Rules</h1>
+    <p>Play Go Fish right here against computer opponents &mdash; no download, no sign-up &mdash; then scroll down for the complete rules, the two-player version, house variations and a few tricks for winning more books.</p>
+    <div class="hero-actions"><a class="button" href="#play">Play Go Fish Now</a><a class="button ghost" href="#rules">Read the Rules</a></div>
+    <p class="byline">Kings Cup Online editors &middot; Updated <time datetime="2026-09-14">September 14, 2026</time></p>
+  </section>
+
+  <section class="gf" id="play" aria-labelledby="gf-title">
+    <div class="gf-panel">
+      <div class="gf-panel-head">
+        <h2 id="gf-title">Play Go Fish Online</h2>
+        <p>Tap a card to pick a rank, tap a player, then ask. Four of a kind is a book.</p>
+      </div>
+
+      <form class="gf-setup" id="gf-setup">
+        <fieldset>
+          <legend>How many players?</legend>
+          <div class="gf-seg" role="radiogroup" aria-label="Number of players">
+            <label><input type="radio" name="players" value="2" checked><span>2 players</span></label>
+            <label><input type="radio" name="players" value="3"><span>3 players</span></label>
+            <label><input type="radio" name="players" value="4"><span>4 players</span></label>
+          </div>
+        </fieldset>
+        <label class="gf-check"><input type="checkbox" name="lucky" checked><span><strong>Lucky fish rule:</strong> if the card you draw is the rank you just asked for, you take another turn. Untick for the simpler version where a &ldquo;Go Fish&rdquo; always ends your turn.</span></label>
+        <button class="gf-deal" type="submit">Deal the Cards</button>
+        <p class="gf-record" id="gf-record"></p>
+      </form>
+
+      <div class="gf-board" id="gf-board" hidden>
+        <div class="gf-opponents" id="gf-opponents"></div>
+        <div class="gf-middle">
+          <div class="gf-stock" id="gf-stock" aria-live="polite"><span><strong id="gf-stock-count">0</strong>in the pond</span></div>
+          <p class="gf-bubble" id="gf-bubble" role="status" aria-live="polite"></p>
+        </div>
+        <div class="gf-you">
+          <div class="gf-you-head"><strong>&#128526; Your hand</strong><span id="gf-hand-count"></span><span class="gf-books" id="gf-books"></span></div>
+          <div class="gf-hand" id="gf-hand"></div>
+          <div class="gf-actions">
+            <button type="button" class="gf-ask" id="gf-ask" disabled>Ask for a rank</button>
+            <button type="button" class="gf-restart" data-gf="restart">New game</button>
+            <p class="gf-hint" id="gf-hint"></p>
+          </div>
+        </div>
+        <details class="gf-log-wrap"><summary>Game log</summary><ol class="gf-log" id="gf-log"></ol></details>
+        <div class="gf-overlay" id="gf-overlay" hidden>
+          <div class="gf-result" role="dialog" aria-live="assertive" aria-label="Game over">
+            <div id="gf-result"></div>
+            <div class="gf-result-actions"><button type="button" class="gf-ask" data-gf="again">Play again</button><button type="button" class="gf-restart" data-gf="restart">Change players</button></div>
+          </div>
+        </div>
+      </div>
+      <noscript><p style="padding:18px 22px;margin:0;color:#414153">The online game needs JavaScript. The full Go Fish rules below work without it.</p></noscript>
+    </div>
+  </section>
+
+  <div class="layout">
+    <article class="content" id="rules">
+      <p class="quick-answer"><strong>Go Fish rules in one sentence:</strong> Deal 7 cards each (5 with four or more players), take turns asking one opponent for a rank you already hold, take every card of that rank if they have it or draw from the pond if they say &ldquo;Go Fish!&rdquo;, lay down four of a kind as a book, and whoever has the most books when all 13 are made wins.</p>
+
+      <h2 id="what-is">What Is Go Fish?</h2>
+      <p>Go Fish is a matching card game for two to six players, played with a standard 52-card deck. Each player tries to collect <strong>books</strong> &mdash; all four cards of one rank &mdash; by asking other players for cards they need. If the player you ask has any, they must hand them over. If not, they say &ldquo;Go Fish!&rdquo; and you draw from the face-down pile in the middle, which is usually called the <strong>pond</strong> or the <strong>fish pile</strong>.</p>
+      <p>It is often the first real card game a child learns, because the rules fit in a few sentences and every turn is a simple question. It is not only a kids&rsquo; game, though: with grown-ups who pay attention to what everyone asks for, it turns into a quick memory duel where the best players win far more than their share.</p>
+      <p>Go Fish belongs to a family of asking games that goes back to the 19th century, alongside <strong>Authors</strong> (an American version originally played with cards showing famous writers) and <strong>Happy Families</strong> in Britain &mdash; <a href="https://www.pagat.com/quartet/gofish.html" rel="nofollow noopener" target="_blank">Pagat</a> traces the whole family to the mid-1800s, and <a href="https://en.wikipedia.org/wiki/Go_Fish" rel="nofollow noopener" target="_blank">Wikipedia</a> notes a possible Italian ancestor from the 1400s. The names differ; the ask-and-collect loop is the same. If your group is after a louder, party-style card game instead, the same deck plays <a href="/kings-cup-rules/">Kings Cup</a>.</p>
+
+      <h2 id="equipment">What You Need to Play</h2>
+      <ul>
+        <li><strong>One standard 52-card deck.</strong> No jokers. A themed deck with pictures of fish works exactly the same way, and is easier for small hands and pre-readers.</li>
+        <li><strong>2 to 6 players.</strong> Three to five is the sweet spot at a table. The <a href="#play">online version above</a> plays 2 to 4.</li>
+        <li><strong>Somewhere to put the pond.</strong> The undealt cards go face down in a loose pile in the middle so nobody can see the order.</li>
+      </ul>
+
+      <h2 id="setup">Go Fish Setup: How Many Cards to Deal</h2>
+      <p>Shuffle, pick a dealer, and deal the cards one at a time, face down.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Players</th><th>Cards each</th><th>Left in the pond</th></tr></thead>
+          <tbody>
+            <tr><td>2</td><td>7</td><td>38</td></tr>
+            <tr><td>3</td><td>7</td><td>31</td></tr>
+            <tr><td>4</td><td>5</td><td>32</td></tr>
+            <tr><td>5</td><td>5</td><td>27</td></tr>
+            <tr><td>6</td><td>5</td><td>22</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Spread the rest face down in the middle as the pond. Players look at their own cards and keep them hidden. If anyone is dealt four of a kind, they lay it down as a book straight away. The player to the dealer&rsquo;s left goes first, and play moves clockwise.</p>
+      <div class="note"><strong>Seen a different number?</strong> Some rule sheets deal 7 cards to everyone, others 5 for three players. It does not change the game much &mdash; more cards in hand means more ranks to ask for and a shorter pond. Agree on one before dealing.</div>
+
+      <h2 id="turns">How to Play Go Fish: A Turn, Step by Step</h2>
+      <ol>
+        <li><strong>Pick a rank you hold.</strong> You may only ask for a rank you already have at least one card of. If you hold a seven, you can ask for sevens; you cannot fish for sevens on a hunch.</li>
+        <li><strong>Ask one specific player.</strong> &ldquo;Sam, do you have any sevens?&rdquo; You ask by rank only, never by suit, and you ask one person, not the table.</li>
+        <li><strong>If they have any, they hand over all of them.</strong> Not one &mdash; every card of that rank. You then take <strong>another turn</strong>, and can ask anyone for any rank you hold.</li>
+        <li><strong>If they have none, they say &ldquo;Go Fish!&rdquo;</strong> You draw the top card of the pond and add it to your hand.</li>
+        <li><strong>Lucky fish.</strong> If the card you drew is the rank you just asked for, show it and take another turn. If it is anything else, keep it quietly and your turn ends.</li>
+        <li><strong>Lay down any book.</strong> Whenever you hold all four cards of a rank, put them face up in front of you. This can happen mid-turn.</li>
+        <li><strong>Play passes left</strong> to the next player once your turn ends.</li>
+      </ol>
+      <figure class="rules-cheat-sheet">
+        <picture>
+          <source srcset="/images/go-fish-turn.webp" type="image/webp">
+          <img src="/images/go-fish-turn.png" width="960" height="500" loading="lazy" decoding="async" alt="Go Fish turn diagram: pick a rank you hold, ask one player, then either take their cards and go again or draw from the pond after Go Fish">
+        </picture>
+        <figcaption><strong>One Go Fish turn.</strong> Ask for a rank you hold; a yes keeps your turn, a &ldquo;Go Fish!&rdquo; sends you to the pond.</figcaption>
+      </figure>
+      <p>Two things trip up new players. First, you must answer honestly &mdash; if you are asked for queens and you have one, it goes. Second, asking is public information: everyone at the table now knows you hold at least one seven, which is exactly what makes the game interesting.</p>
+
+      <h2 id="ending">Books, Empty Hands and How the Game Ends</h2>
+      <h3>Books</h3>
+      <p>A book is four of a kind. There are 13 in the deck, one per rank. Books are laid face up and cannot be asked for or lost once made. Each book is worth one point.</p>
+      <h3>Running out of cards</h3>
+      <p>If you lay down a book and have nothing left, or you hand over your last card, you are not out. On your next turn, draw one card from the pond and ask for that rank. If the pond is empty too, you sit out until the game ends.</p>
+      <h3>When the pond runs dry</h3>
+      <p>Play continues without drawing: a &ldquo;Go Fish&rdquo; simply ends your turn. Since every card of every rank is now in someone&rsquo;s hand, the remaining books get made quickly.</p>
+      <h3>Winning</h3>
+      <p>The game ends when all 13 books have been laid down. The player with the <strong>most books</strong> wins. Ties are common with two players; play another hand or count it as a draw.</p>
+
+      <h2 id="two-players">Go Fish Rules for 2 Players</h2>
+      <p>The game works well head to head and is probably played that way more than any other. Deal <strong>7 cards each</strong> and use the rest as the pond. There is only one person to ask, so the guessing is about ranks, not people: which of your ranks is your opponent most likely to be holding?</p>
+      <p>Two-player games run long if both sides ask carefully, so many pairs play to a set number of books (say, first to 4) or play a best-of-three. The <a href="#play">online game above</a> defaults to two players and uses the standard rules, so it is a good way to learn before teaching someone else.</p>
+
+      <h2 id="variations">Common Go Fish Variations</h2>
+      <p>These are the house rules most likely to differ from one family to another. None of them is more &ldquo;official&rdquo; than the others; pick one set and say it out loud before the deal.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Variation</th><th>How it changes the game</th><th>Best for</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Pairs instead of books</strong></td><td>Lay down any two of a kind. Games are faster and hands smaller.</td><td>Young children, big groups.</td></tr>
+            <tr><td><strong>Ask for a specific card</strong></td><td>&ldquo;Do you have the seven of hearts?&rdquo; Only that one card changes hands.</td><td>Players who want more memory work.</td></tr>
+            <tr><td><strong>One card at a time</strong></td><td>The asked player gives only one card of the rank even if they hold more.</td><td>Slowing down a runaway leader.</td></tr>
+            <tr><td><strong>Turn goes to the fisher</strong></td><td>After &ldquo;Go Fish!&rdquo;, the player who was asked takes the next turn instead of the player to the left.</td><td>Groups of five or six.</td></tr>
+            <tr><td><strong>No lucky fish</strong></td><td>Drawing the rank you asked for does not earn an extra turn.</td><td>Keeping turns even and simple.</td></tr>
+            <tr><td><strong>Refill on empty</strong></td><td>A player with no cards draws a fresh hand of 5 (or 7) instead of a single card.</td><td>Keeping everyone in a long game.</td></tr>
+            <tr><td><strong>Face-value scoring</strong></td><td>Number books score face value, Jacks 11, Queens 12, Kings 13, Aces 15. Play to a target such as 100.</td><td>Multi-hand sessions.</td></tr>
+            <tr><td><strong>Jokers wild</strong></td><td>Two jokers stand in for any card when completing a book.</td><td>Extra chaos with younger players.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Prefer a drinking or party twist? Kings Cup is built on a similar &ldquo;draw a card, follow the rule&rdquo; loop &mdash; see the <a href="/kings-cup-variations/">Kings Cup variations</a> for the short, two-player and family formats.</p>
+
+      <h2 id="strategy">How to Win at Go Fish</h2>
+      <p>Luck decides the deal; memory decides the game. Almost every edge comes from listening.</p>
+      <ul>
+        <li><strong>Remember every ask.</strong> When Sam asks for nines, Sam holds a nine. Unless somebody takes them, Sam still holds it three turns later. Ask Sam for nines the moment you draw one.</li>
+        <li><strong>Track the &ldquo;no&rdquo; answers too.</strong> If Alex told Sam &ldquo;Go Fish&rdquo; on nines, Alex has no nines &mdash; until Alex draws an unknown card.</li>
+        <li><strong>Ask for what you have most of.</strong> Three of a kind in hand means only one card is missing, and it is either in the pond or with one player. Fish for it every turn you can.</li>
+        <li><strong>Ask before you draw.</strong> A successful ask gives you another turn; a successful draw is pure luck. Prioritise ranks you have evidence about.</li>
+        <li><strong>Don&rsquo;t reveal a new rank unless you must.</strong> Every ask tells the table what you hold. If you have two safe asks, use the one you have already announced.</li>
+        <li><strong>Count the books on the table.</strong> Once a rank is laid down, nobody can hold it. Fewer live ranks means your guesses get better as the game goes on.</li>
+      </ul>
+      <p>The computer opponents in the game above use exactly this: they remember every public ask and every &ldquo;Go Fish&rdquo;, and nothing else. Beat them by remembering more.</p>
+
+      <h2 id="kids">Go Fish for Kids</h2>
+      <p>This is usually the first card game children play, typically from around age four. A few adjustments help at the younger end:</p>
+      <ul>
+        <li><strong>Use a picture deck</strong> or play pairs instead of books so the goal is easy to see.</li>
+        <li><strong>Let hands sit face up</strong> on the table for the first few games. Learning to fan seven cards is its own skill.</li>
+        <li><strong>Deal fewer cards</strong> &mdash; five each, even in a two-player game.</li>
+        <li><strong>Say the question out loud together</strong> until the &ldquo;Do you have any&hellip;?&rdquo; habit is automatic.</li>
+      </ul>
+      <p>For a table of adults who want something rowdier than an asking game, the <a href="/kings-cup-without-alcohol/">non-alcoholic Kings Cup rules</a> keep the party energy without the drinking.</p>
+
+      <h2 id="faq">Go Fish FAQ</h2>
+      <div class="faq">
+        <h3>How many cards do you deal in Go Fish?</h3>
+        <p>Deal 7 cards each with two or three players and 5 cards each with four or more. The rest go face down in the middle as the pond. Some households deal 7 to everyone regardless of numbers, which works fine as long as everyone gets the same amount.</p>
+      </div>
+      <div class="faq">
+        <h3>Can you play Go Fish with 2 players?</h3>
+        <p>Yes. Deal 7 cards each and play with the standard rules. Because there is only one opponent to ask, the game is about remembering which ranks they have asked for and which ones they have said Go Fish to. Two-player games can run long, so many people play to a set number of books.</p>
+      </div>
+      <div class="faq">
+        <h3>Can you ask for a card you don&rsquo;t have?</h3>
+        <p>No. You may only ask for a rank you already hold at least one card of. This is the rule that makes asking risky, because every question tells the other players something about your hand.</p>
+      </div>
+      <div class="faq">
+        <h3>Do you get another turn if you draw the card you asked for?</h3>
+        <p>In the most common rules, yes: if the card you fish from the pond is the rank you just asked for, you show it and take another turn. Some families skip this rule and end the turn after any Go Fish. Decide before you start.</p>
+      </div>
+      <div class="faq">
+        <h3>What happens when you run out of cards?</h3>
+        <p>You stay in the game. On your next turn, draw one card from the pond and ask for that rank. If the pond is empty as well, you sit out until the game ends and still count the books you have already made. Some house rules let you draw a full new hand instead of a single card.</p>
+      </div>
+      <div class="faq">
+        <h3>How does the game end and who wins?</h3>
+        <p>The game ends when all thirteen books have been laid down, or when the pond is empty and nobody has cards left. The player with the most books wins. Each book counts as one point regardless of rank.</p>
+      </div>
+      <div class="faq">
+        <h3>What is a book?</h3>
+        <p>A book is a set of all four cards of one rank, such as the four Kings. As soon as you hold a complete book you place it face up in front of you, and it can no longer be asked for. There are thirteen books in a standard deck.</p>
+      </div>
+      <div class="faq">
+        <h3>Is Go Fish a game of luck or skill?</h3>
+        <p>Both. The deal and the draws are luck, but who to ask and what to ask for is skill. Players who remember every request and every Go Fish answer win far more often than players who ask at random, which is why the game holds up for adults as well as children.</p>
+      </div>
+      <div class="faq">
+        <h3>What age is Go Fish suitable for?</h3>
+        <p>Most children can play from around age four, especially with a picture deck or by collecting pairs instead of books. Reading is not required as long as the ranks are recognisable, and the rules take about a minute to explain.</p>
+      </div>
+      <div class="faq">
+        <h3>Do you need a special deck?</h3>
+        <p>No. Any standard 52-card deck works, with the jokers removed. Themed Go Fish decks with fish or animal pictures are sold for young children, and they play exactly the same way using matching pictures instead of ranks.</p>
+      </div>
+
+      <section class="related">
+        <h2>More Card and Party Game Guides</h2>
+        <div class="cards">
+          <div class="card"><h3><a href="/kings-cup-rules/">Kings Cup Rules</a></h3><p>Every card from Ace to King, with a cheat sheet you can screenshot.</p></div>
+          <div class="card"><h3><a href="/how-to-play-kings-cup/">How to Play Kings Cup</a></h3><p>A beginner-friendly walkthrough from setup to the final King.</p></div>
+          <div class="card"><h3><a href="/beer-pong/">Beer Pong Rules</a></h3><p>The 10-cup rack, re-racks, redemption and the house rules to settle first.</p></div>
+          <div class="card"><h3><a href="/kings-cup-variations/">Kings Cup Variations</a></h3><p>Short, remote, two-player, family and non-drinking formats.</p></div>
+          <div class="card"><h3><a href="/kings-cup-without-alcohol/">Kings Cup Without Alcohol</a></h3><p>The full substitution list for a dry table.</p></div>
+          <div class="card"><h3><a href="/">Play Kings Cup Online</a></h3><p>Start immediately with a shuffled deck and on-screen rules.</p></div>
+        </div>
+      </section>
+      <section class="play-cta">
+        <h2>Same Deck, Bigger Party: Try Kings Cup</h2>
+        <p>Fishing is the quiet one. Kings Cup turns the same 52 cards into a rule-a-card party game &mdash; free, in your browser, no account needed.</p>
+        <a class="button" href="/">Play Kings Cup Online</a>
+      </section>
+    </article>
+    <aside class="toc">
+      <strong>On this page</strong>
+      <a href="#play">Play Go Fish online</a>
+      <a href="#what-is">What is Go Fish?</a>
+      <a href="#equipment">What you need</a>
+      <a href="#setup">Setup &amp; deal</a>
+      <a href="#turns">How to play</a>
+      <a href="#ending">Books &amp; winning</a>
+      <a href="#two-players">2-player rules</a>
+      <a href="#variations">Variations</a>
+      <a href="#strategy">Strategy</a>
+      <a href="#kids">Go Fish for kids</a>
+      <a href="#faq">FAQ</a>
+      <a href="/">Play Kings Cup</a>
+    </aside>
+  </div>
+</main>
+<footer>
+  <p>&#9819; Kings Cup Online &middot; Play responsibly and respect every player&rsquo;s choice.</p>
+  <p><a href="/">Play</a><a href="/kings-cup-rules/">Rules</a><a href="/kings-cup-cards/">Cards</a><a href="/beer-pong/">Beer Pong</a><a href="/go-fish/">Go Fish</a><a href="/partners.html">Partners</a></p>
+</footer>
+<script src="/go-fish/game.js" defer></script>
+</body>
+</html>

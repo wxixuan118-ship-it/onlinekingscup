@@ -31,7 +31,7 @@
 <meta name="theme-color" content="#6c47ff">
 <meta name="msapplication-TileColor" content="#6c47ff">
 
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Kings Cup Online","url":"https://www.onlinekingscup.com/","description":"Free online Kings Cup drinking card game. 5 game modes, 54-card deck, complete rules. No download or signup required.","applicationCategory":"GameApplication","operatingSystem":"Any Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"genre":["Card Game","Party Game","Drinking Game"]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Kings Cup?","acceptedAnswer":{"@type":"Answer","text":"Kings Cup (also known as Ring of Fire, Circle of Death, or Waterfall) is one of the most popular party card games in the world. Players sit in a circle and take turns drawing cards from a face-down deck. Each card has a corresponding rule — follow it or face the consequences. The game builds toward a dramatic finale when someone draws the 4th King and must drink the central \"King's Cup.\""}},{"@type":"Question","name":"How many players do you need?","acceptedAnswer":{"@type":"Answer","text":"It works with as few as 2 players, but is best with 4–8 players. The more people at the table, the more chaotic and hilarious the social rules become — especially Never Have I Ever, Rhyme, and Categories."}},{"@type":"Question","name":"Do I need alcohol to play?","acceptedAnswer":{"@type":"Answer","text":"Not at all! It's just as fun with soda, juice, water, or any non-alcoholic beverage. Our Family version replaces all \"drink\" rules with physical challenges like jumping jacks, push-ups, and silly dances — making it suitable for all ages."}},{"@type":"Question","name":"What exactly is the King's Cup?","acceptedAnswer":{"@type":"Answer","text":"In the traditional game, a large cup is placed in the center of the table. Every time a King card is drawn, that player pours some of their drink into the central cup. The player who draws the 4th and final King must drink the entire mixed cup — whatever's in it. In our online version, the King counter (♛♛♛♛) at the top of the screen tracks this for you."}},{"@type":"Question","name":"Can I play Kings Cup online with friends remotely?","acceptedAnswer":{"@type":"Answer","text":"Yes! Share your screen via Zoom, FaceTime, Google Meet, or Discord, then one person taps \"Draw Card\" each turn. Everyone can see the card and rule on screen. It works great for virtual parties and online game nights."}},{"@type":"Question","name":"What's the difference between Kings Cup, Ring of Fire, and Circle of Death?","acceptedAnswer":{"@type":"Answer","text":"They're all the same game with slightly different regional names! \"Kings Cup\" is most common in North America, \"Ring of Fire\" is popular in the UK, and \"Circle of Death\" is another common name. The core rules are nearly identical — a deck of cards, one rule per card value, and a central cup filled by King draws."}},{"@type":"Question","name":"Is Kings Cup Online free? Do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"It's completely free to play with no signup, no download, and no app install required. Just open it in your browser and hit \"Play Free Now.\" It works on iPhone, Android, tablets, and desktop computers."}}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Kings Cup Online","url":"https://www.onlinekingscup.com/","description":"Free online Kings Cup drinking card game. 5 game modes, 54-card deck, complete rules. No download or signup required.","applicationCategory":"GameApplication","operatingSystem":"Any Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"genre":["Card Game","Party Game","Drinking Game"]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Kings Cup?","acceptedAnswer":{"@type":"Answer","text":"Kings Cup (also known as Ring of Fire, Circle of Death, or Waterfall) is one of the most popular party card games in the world. Players sit in a circle and take turns drawing cards from a face-down deck. Each card has a corresponding rule — follow it or face the consequences. The game builds toward a dramatic finale when someone draws the 4th King and must drink the central \"King's Cup.\""}},{"@type":"Question","name":"How many players do you need?","acceptedAnswer":{"@type":"Answer","text":"It works with as few as 2 players, but is best with 4–8 players. The more people at the table, the more chaotic and hilarious the social rules become — especially Never Have I Ever, Rhyme, and Categories."}},{"@type":"Question","name":"Do I need alcohol to play?","acceptedAnswer":{"@type":"Answer","text":"Not at all! It's just as fun with soda, juice, water, or any non-alcoholic beverage. Our Family version replaces all \"drink\" rules with physical challenges like jumping jacks, push-ups, and silly dances — making it suitable for all ages."}},{"@type":"Question","name":"What exactly is the King's Cup?","acceptedAnswer":{"@type":"Answer","text":"In the traditional game, a large cup is placed in the center of the table. Every time a King card is drawn, that player pours some of their drink into the central cup. The player who draws the 4th and final King must drink the entire mixed cup — whatever's in it. In our online version, the King counter (♛♛♛♛) at the top of the screen tracks this for you."}},{"@type":"Question","name":"Can I play Kings Cup online with friends remotely?","acceptedAnswer":{"@type":"Answer","text":"Yes! Share your screen via Zoom, FaceTime, Google Meet, or Discord, then one person taps \"Draw Card\" each turn. Everyone can see the card and rule on screen. It works great for virtual parties and online game nights."}},{"@type":"Question","name":"What's the difference between Kings Cup, Ring of Fire, and Circle of Death?","acceptedAnswer":{"@type":"Answer","text":"They're all the same game with slightly different regional names! \"Kings Cup\" is most common in North America, \"Ring of Fire\" is popular in the UK, and \"Circle of Death\" is another common name. The core rules are nearly identical — a deck of cards, one rule per card value, and a central cup filled by King draws."}},{"@type":"Question","name":"Is Kings Cup Online free? Do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"It's completely free to play with no signup, no download, and no app install required. Just open it in your browser and tap \"Start Game.\" It works on iPhone, Android, tablets, and desktop computers."}}]}]</script>
 
 <style>
 /* ──────────────────────────────────
@@ -232,11 +232,12 @@ nav a:hover { background: var(--brand-light); color: var(--brand); text-decorati
 .hero {
   background: linear-gradient(160deg, #1a1a2e 0%, #2d1b69 50%, #1a1a2e 100%);
   color: white;
-  padding: 72px 20px 80px;
+  padding: 28px 20px 32px;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
+.hero-inner { position: relative; max-width: 960px; margin: 0 auto; }
 .hero::before {
   content: '';
   position: absolute; inset: 0;
@@ -251,14 +252,14 @@ nav a:hover { background: var(--brand-light); color: var(--brand); text-decorati
   color: #FFD700;
   font-size: 0.75rem; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 5px 14px; border-radius: 20px; margin-bottom: 20px;
+  padding: 5px 14px; border-radius: 20px; margin-bottom: 14px;
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
   font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 18px;
+  line-height: 1.15;
+  margin-bottom: 10px;
   letter-spacing: -0.02em;
 }
 .hero h1 span {
@@ -266,12 +267,46 @@ nav a:hover { background: var(--brand-light); color: var(--brand); text-decorati
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .hero-sub {
-  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-size: clamp(0.88rem, 1.6vw, 1rem);
   color: rgba(255,255,255,0.65);
-  max-width: 560px; margin: 0 auto 36px;
-  line-height: 1.7;
+  max-width: 640px; margin: 0 auto 20px;
+  line-height: 1.6;
 }
-.hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.hero-sub strong { color: rgba(255,255,255,0.9); }
+
+/* Game stage — the playable frame in the first screen */
+.game-stage {
+  position: relative; scroll-margin-top: calc(var(--nav-h) + 16px);
+  width: 100%; height: clamp(520px, 74vh, 700px);
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,215,0,0.08);
+  background: #0D0D1A;
+}
+.stage-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  margin-top: 14px; font-size: 0.82rem; color: rgba(255,255,255,0.55);
+}
+.stage-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.stage-btn {
+  background: rgba(255,255,255,0.08); color: #fff;
+  border: 1px solid rgba(255,255,255,0.2); border-radius: 50px;
+  padding: 8px 16px; font-size: 0.82rem; font-weight: 600; cursor: pointer;
+  transition: background 0.15s;
+}
+.stage-btn:hover { background: rgba(255,255,255,0.16); }
+@media (max-width: 700px) {
+  .hero { padding: 18px 12px 22px; }
+  .hero-badge { display: none; }
+  .hero h1 { font-size: 1.35rem; }
+  .hero-sub { font-size: 0.84rem; margin-bottom: 14px; }
+  .game-stage { height: clamp(440px, 68vh, 600px); border-radius: 14px; }
+  .stage-bar { justify-content: center; text-align: center; }
+}
+
+/* Ad slot directly below the game; collapses until an ad unit is placed inside */
+.ad-slot { max-width: 960px; margin: 24px auto 0; padding: 0 20px; text-align: center; }
+.ad-slot:empty { display: none; }
 
 .btn-primary {
   background: linear-gradient(135deg, #FFD700, #FFA500);
@@ -293,18 +328,6 @@ nav a:hover { background: var(--brand-light); color: var(--brand); text-decorati
 }
 .btn-outline:hover { background: rgba(255,255,255,0.14); }
 
-.hero-cards {
-  display: flex; justify-content: center; gap: 8px;
-  margin-top: 48px; font-size: 2.2rem;
-  opacity: 0.8;
-}
-.hero-cards span { animation: cardFloat var(--d, 3s) ease-in-out infinite; }
-.hero-cards span:nth-child(1) { --d:2.8s; }
-.hero-cards span:nth-child(2) { --d:3.2s; animation-delay:.3s; }
-.hero-cards span:nth-child(3) { --d:2.6s; animation-delay:.6s; }
-.hero-cards span:nth-child(4) { --d:3.5s; animation-delay:.2s; }
-.hero-cards span:nth-child(5) { --d:2.9s; animation-delay:.8s; }
-@keyframes cardFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
 
 /* ──────────────────────────────────
    TRUST BAR
@@ -527,13 +550,15 @@ footer {
    GAME OVERLAY (fullscreen)
 ────────────────────────────────── */
 .game-overlay {
-  position: fixed; inset: 0; z-index: 1000;
-  display: none; background: #0D0D1A;
+  position: absolute; inset: 0;
+  background: #0D0D1A;
+  container-type: size;
 }
-.game-overlay.active { display: block; }
+.game-overlay.fullscreen { position: fixed; z-index: 1000; }
 
-/* Game close button */
-.game-close {
+/* Corner buttons: ⛶ toggles fullscreen, ✕ exits it. Hidden on the main screen
+   (which has its own action row) so they never overlap the in-game header. */
+.game-close, .game-fs {
   position: absolute; top: 14px; right: 16px;
   z-index: 1100;
   background: rgba(255,255,255,0.12); color: white;
@@ -542,7 +567,12 @@ footer {
   cursor: pointer; display: flex; align-items: center; justify-content: center;
   transition: background 0.15s;
 }
-.game-close:hover { background: rgba(255,255,255,0.22); }
+.game-close:hover, .game-fs:hover { background: rgba(255,255,255,0.22); }
+.game-fs { right: 60px; font-size: 1rem; }
+.game-overlay:not(.fullscreen) .game-close { display: none; }
+.game-overlay:not(.fullscreen) .game-fs { right: 16px; }
+.game-overlay[data-screen="main"] .game-close,
+.game-overlay[data-screen="main"] .game-fs { display: none; }
 
 /* ── GAME SCREENS ── */
 .gscreen {
@@ -677,17 +707,21 @@ footer {
 .g-toast { position:fixed; bottom:110px; left:50%; transform:translateX(-50%) translateY(14px); background:rgba(255,215,0,.92); color:#1a1a00; padding:9px 22px; border-radius:50px; font-weight:700; font-size:.87rem; opacity:0; transition:all .28s; pointer-events:none; white-space:nowrap; z-index:1300; }
 .g-toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
 
-@media (max-height:650px) {
+@container (max-height:650px) {
   .card-wrap { width:210px; height:300px; }
   .c-back-crown { font-size:2.5rem; }
 }
-@media (max-width:360px) {
+@container (max-height:560px) {
+  .card-wrap { width:180px; height:256px; }
+  .draw-area { padding-bottom:14px; }
+}
+@container (max-width:360px) {
   .card-wrap { width:230px; height:328px; }
 }
 
 /* ── PLAYERS SCREEN ── */
 .g-players-bg { background:radial-gradient(ellipse at top,#0d1b3e 0%,#0D0D1A 70%); justify-content:flex-start; padding-top:56px; }
-.g-players-list { display:flex; flex-direction:column; gap:8px; width:100%; max-width:440px; max-height:52vh; overflow-y:auto; margin-bottom:4px; padding-right:2px; }
+.g-players-list { display:flex; flex-direction:column; gap:8px; width:100%; max-width:440px; max-height:52cqh; overflow-y:auto; margin-bottom:4px; padding-right:2px; }
 .g-players-list::-webkit-scrollbar { width:3px; }
 .g-players-list::-webkit-scrollbar-thumb { background:rgba(255,255,255,.2); border-radius:3px; }
 .player-row { display:flex; align-items:center; gap:10px; padding:10px 14px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:12px; transition:border-color .15s; }
@@ -719,7 +753,7 @@ footer {
 
 /* ── TIMER ── */
 /* Floating countdown ring (top-right of overlay) */
-.timer-display { position:absolute; top:56px; right:56px; width:68px; height:68px; display:none; align-items:center; justify-content:center; z-index:1060; cursor:pointer; }
+.timer-display { position:absolute; top:14px; left:16px; width:68px; height:68px; display:none; align-items:center; justify-content:center; z-index:1060; cursor:pointer; }
 .timer-display.active { display:flex; }
 .timer-display.alarm { animation:tAlarm .25s ease infinite; }
 @keyframes tAlarm { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
@@ -775,23 +809,150 @@ footer {
 </header>
 
 <!-- ════════════════════════════════
-     HERO
+     HERO — the game itself is the first screen
 ════════════════════════════════ -->
-<section class="hero">
-  <div class="hero-badge">🃏 Free Online Card Game — No Download Required</div>
-  <h1><span>Kings Cup Online</span> - The Classic Card Drinking Game</h1>
-  <p class="hero-sub">
-    Play Kings Cup online free — the world's most popular drinking card game, right in your browser.
-    Also known as <strong>Ring of Fire</strong> and <strong>Circle of Death</strong> —
-    54 cards, 5 game modes, infinite fun. No app, no signup needed.
-  </p>
-  <div class="hero-btns">
-    <button class="btn-primary" onclick="openGame('home')">▶ Play Free Now</button>
-  </div>
-  <div class="hero-cards">
-    <span>🂡</span><span>🂮</span><span>♛</span><span>🂭</span><span>🂫</span>
+<section class="hero" id="play">
+  <div class="hero-inner">
+    <div class="hero-badge">🃏 Free Online Card Game — No Download Required</div>
+    <h1><span>Kings Cup Online</span> - The Classic Card Drinking Game</h1>
+    <p class="hero-sub">
+      Play Kings Cup online free — also known as <strong>Ring of Fire</strong> and <strong>Circle of Death</strong>.
+      54 cards, 5 game modes, no app or signup. Tap <strong>Start Game</strong> below to play.
+    </p>
+
+    <div class="game-stage" id="game-stage">
+<!-- ════════════════════════════════
+           GAME STAGE (inline; fullscreen toggle)
+      ════════════════════════════════ -->
+      <div class="game-overlay" id="game-overlay" data-screen="home">
+        <button class="game-fs" onclick="toggleFullscreen()" title="Fullscreen" aria-label="Toggle fullscreen">⛶</button>
+        <button class="game-close" onclick="closeGame()" title="Exit fullscreen" aria-label="Exit fullscreen">✕</button>
+      
+        <!-- Game: Home -->
+        <div class="gscreen g-home active" id="gs-home">
+          <div class="g-crown">👑</div>
+          <div class="g-title">Kings Cup</div>
+          <p class="g-online">Online</p>
+          <p class="g-tagline">The classic party card game</p>
+          <button class="g-btn-gold" onclick="gShowScreen('version')" style="color:#1a1a00;">Start Game</button>
+        </div>
+      
+        <!-- Game: Version select -->
+        <div class="gscreen g-version-bg" id="gs-version">
+          <div class="g-top-bar">
+            <button class="g-back-btn" onclick="gShowScreen('home')">←</button>
+            <span class="g-heading">Choose Version</span>
+          </div>
+          <div class="g-vlist" id="g-vlist"></div>
+          <div class="g-play-wrap">
+            <button class="g-btn-gold" onclick="gShowScreen('players')" style="width:100%;color:#1a1a00;">Let's Play →</button>
+          </div>
+        </div>
+      
+        <!-- Game: Players setup -->
+        <div class="gscreen g-players-bg" id="gs-players">
+          <div class="g-top-bar">
+            <button class="g-back-btn" onclick="gShowScreen('version')">←</button>
+            <span class="g-heading">Who's Playing?</span>
+          </div>
+          <div class="g-players-list" id="g-players-list"></div>
+          <button class="g-add-btn" onclick="addPlayer()">＋ Add Player</button>
+          <div class="g-play-wrap">
+            <button class="g-btn-gold" onclick="startGame()" style="width:100%;color:#1a1a00;">▶ Start Game</button>
+          </div>
+        </div>
+      
+        <!-- Game: Main -->
+        <div class="gscreen g-main-bg" id="gs-main">
+          <div class="g-header">
+            <div class="g-hr1">
+              <span class="g-turn" id="g-turn">👤 Player 1's turn</span>
+              <div class="g-actions">
+                <button class="g-icon-btn" id="sound-btn" onclick="toggleSound()" title="Sound">🔊</button>
+                <button class="g-icon-btn" onclick="openTimerSheet()" title="Timer">⏱</button>
+                <button class="g-icon-btn" onclick="toggleFullscreen()" title="Fullscreen">⛶</button>
+                <button class="g-icon-btn" onclick="openGMenu()">☰</button>
+              </div>
+            </div>
+            <div class="g-hr2">
+              <div class="kings-row">
+                <span class="k-icon" id="k1">♛</span>
+                <span class="k-icon" id="k2">♛</span>
+                <span class="k-icon" id="k3">♛</span>
+                <span class="k-icon" id="k4">♛</span>
+              </div>
+              <span class="g-rem" id="grem">54 cards left</span>
+            </div>
+          </div>
+          <div class="card-area">
+            <div class="card-wrap">
+              <div class="gcard" id="gcard">
+                <div class="card-face c-back">
+                  <div class="c-back-inner">
+                    <span class="c-back-crown">♛</span>
+                    <span class="c-back-text">Kings Cup</span>
+                  </div>
+                </div>
+                <div class="card-face c-front">
+                  <div class="gcard-corner">
+                    <span class="cv" id="cv-tl">A</span>
+                    <span class="cs" id="cs-tl">♠</span>
+                  </div>
+                  <div class="card-mid">
+                    <span class="big-suit" id="big-suit">♠</span>
+                    <span class="rule-badge" id="rule-badge">WATERFALL</span>
+                    <span class="rule-name"  id="rule-name">Waterfall</span>
+                    <span class="rule-desc"  id="rule-desc">Everyone starts drinking at the same time.</span>
+                  </div>
+                  <div class="gcard-corner br">
+                    <span class="cv" id="cv-br">A</span>
+                    <span class="cs" id="cs-br">♠</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="draw-area">
+            <button class="draw-btn" onclick="drawCard()">Draw Card 🃏</button>
+            <p class="draw-hint" id="draw-hint">Tap to draw the first card</p>
+          </div>
+        </div>
+      
+        <!-- Game: Over -->
+        <div class="gscreen g-over-bg" id="gs-over">
+          <div class="go-emoji">🎉</div>
+          <div class="go-title">Game Over!</div>
+          <p class="go-sub">All cards drawn.<br>Hope everyone had a great time!</p>
+          <div class="go-btns">
+            <button class="g-btn-gold" onclick="startGame()" style="color:#1a1a00;">Play Again</button>
+            <button class="g-btn-ghost" onclick="gShowScreen('version')">Change Version</button>
+            <button class="g-btn-ghost" onclick="closeGame(); gShowScreen('home')">Back to Website</button>
+          </div>
+        </div>
+      
+        <!-- Timer: floating countdown ring -->
+        <div class="timer-display" id="timer-display" onclick="stopTimer()">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle class="timer-ring-bg" cx="50" cy="50" r="42"/>
+            <circle class="timer-circle" id="timer-circle" cx="50" cy="50" r="42"/>
+          </svg>
+          <span class="timer-num" id="timer-num">30</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage-bar">
+      <span class="stage-meta">♛ 54-card virtual deck · 5 modes · 2–10 players</span>
+      <div class="stage-actions">
+        <button class="stage-btn" type="button" onclick="openGame('version')">🎮 Choose Version</button>
+        <button class="stage-btn" type="button" onclick="enterFullscreen()">⛶ Fullscreen</button>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- ── Ad slot: directly below the game. Paste the AdSense <ins class="adsbygoogle"> unit inside; hidden while empty. ── -->
+<div class="ad-slot" id="ad-below-game" aria-label="Advertisement"></div>
 
 <!-- ── Trust Bar ── -->
 <div class="trust-bar">
@@ -806,9 +967,93 @@ footer {
 </div>
 
 <!-- ════════════════════════════════
+     GAME VERSIONS
+════════════════════════════════ -->
+<section class="section section--tint" id="versions">
+  <div class="container">
+    <span class="section-label">5 Game Modes</span>
+    <h2 class="section-title">Choose Your Kings Cup Version</h2>
+    <p class="section-sub">
+      Not all parties are the same — so we built five distinct versions of the game.
+      Each mode keeps the same 54-card structure but swaps in rules tailored
+      to your crowd.
+    </p>
+    <div class="versions-grid">
+      <div class="ver-card" onclick="openGame('version', 'classic')">
+        <span class="ver-icon">🃏</span>
+        <div class="ver-name">Classic</div>
+        <p class="ver-desc">The original Ring of Fire rules everyone knows. The perfect starting point for any game night.</p>
+        <span class="ver-badge">Most Popular</span>
+      </div>
+      <div class="ver-card" onclick="openGame('version', 'funny')">
+        <span class="ver-icon">🤣</span>
+        <div class="ver-name">Funny</div>
+        <p class="ver-desc">Silly accents, animal impressions, mime challenges. Great for groups who want a laugh above all else.</p>
+        <span class="ver-badge">Comedy Mode</span>
+      </div>
+      <div class="ver-card" onclick="openGame('version', 'college')">
+        <span class="ver-icon">🎓</span>
+        <div class="ver-name">College</div>
+        <p class="ver-desc">More intense rules with Thumb Master, Give 2/Take 3, and hard Waterfall for experienced players.</p>
+        <span class="ver-badge">Hardcore</span>
+      </div>
+      <div class="ver-card" onclick="openGame('version', 'couples')">
+        <span class="ver-icon">💑</span>
+        <div class="ver-name">Couples</div>
+        <p class="ver-desc">Kiss or drink, stare contests, couple's bets and more. The ultimate version for date night.</p>
+        <span class="ver-badge">Date Night</span>
+      </div>
+      <div class="ver-card" onclick="openGame('version', 'family')">
+        <span class="ver-icon">👨‍👩‍👧</span>
+        <div class="ver-name">Family</div>
+        <p class="ver-desc">No alcohol needed — dances, jumping jacks, jokes and group dares replace all drinking rules.</p>
+        <span class="ver-badge">All Ages</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     MORE GAMES
+════════════════════════════════ -->
+<section class="section" id="more-games">
+  <div class="container">
+    <span class="section-label">More Free Games</span>
+    <h2 class="section-title">Other Party Games You Can Play</h2>
+    <p class="section-sub">Done with Kings Cup? Try another game — every one runs in your browser with no download.</p>
+    <div class="versions-grid games-grid">
+      <a class="ver-card" href="/go-fish/">
+        <span class="ver-icon">🐟</span>
+        <div class="ver-name">Go Fish</div>
+        <p class="ver-desc">Play Go Fish online against computer opponents, then read the full rules and 2-player variations.</p>
+        <span class="ver-badge">Play Online</span>
+      </a>
+      <a class="ver-card" href="/beer-pong/">
+        <span class="ver-icon">🏓</span>
+        <div class="ver-name">Beer Pong</div>
+        <p class="ver-desc">The 10-cup rack, table size, re-racks, bounce shots and redemption — every rule settled before the first throw.</p>
+        <span class="ver-badge">Rules &amp; Setup</span>
+      </a>
+      <a class="ver-card" href="/kings-cup-rule-generator/">
+        <span class="ver-icon">🎲</span>
+        <div class="ver-name">Rule Generator</div>
+        <p class="ver-desc">Generate a random Kings Cup rule or build a custom deck with classic, funny and non-drinking prompts.</p>
+        <span class="ver-badge">Custom Rules</span>
+      </a>
+      <a class="ver-card" href="/kings-cup-without-alcohol/">
+        <span class="ver-icon">🥤</span>
+        <div class="ver-name">Kings Cup Without Alcohol</div>
+        <p class="ver-desc">Sober rules, dares and challenges so anyone can join the table — no drinks required.</p>
+        <span class="ver-badge">All Ages</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
      HOW TO PLAY
 ════════════════════════════════ -->
-<section class="section" id="how-to-play">
+<section class="section section--tint" id="how-to-play">
   <div class="container">
     <span class="section-label">Getting Started</span>
     <h2 class="section-title">How to Play Kings Cup Online</h2>
@@ -855,14 +1100,14 @@ footer {
     <div class="tip-box">
       💡 <strong>Host Tip:</strong> For the best experience, designate one person to tap "Draw Card" each round, then pass the phone after each draw. This keeps turns fair and the game moving fast.
     </div>
-    <p style="margin-top:22px;">Need the full table setup and turn sequence? Read <a href="/how-to-play-kings-cup/"><strong>how to play King's Cup</strong></a>, including physical-deck and remote-play instructions.</p>
+    <p style="margin-top:22px;">Need the full table setup and turn sequence? Read <a href="/kings-cup-rules/#how-to-play"><strong>how to play King's Cup</strong></a>, including physical-deck and remote-play instructions.</p>
   </div>
 </section>
 
 <!-- ════════════════════════════════
      KINGS CUP TOPIC INTRODUCTION
 ════════════════════════════════ -->
-<section class="section section--tint" id="what-is-kings-cup">
+<section class="section" id="what-is-kings-cup">
   <div class="container topic-intro">
     <span class="section-label">The Classic Party Card Game</span>
     <h2 class="section-title">What Is Kings Cup?</h2>
@@ -874,8 +1119,8 @@ footer {
     </p>
     <div class="topic-grid">
       <div class="topic-card">
-        <h3><a href="/how-to-play-kings-cup/">How to Play</a></h3>
-        <p>Set up the deck, choose a turn order, draw clockwise, and complete each card's action before the next turn. See the full <a href="/how-to-play-kings-cup/">how-to-play guide</a>.</p>
+        <h3><a href="/kings-cup-rules/#how-to-play">How to Play</a></h3>
+        <p>Set up the deck, choose a turn order, draw clockwise, and complete each card's action before the next turn. See the full <a href="/kings-cup-rules/#how-to-play">how-to-play guide</a>.</p>
       </div>
       <div class="topic-card">
         <h3><a href="/kings-cup-cards/">Card Meanings</a></h3>
@@ -887,9 +1132,9 @@ footer {
       </div>
     </div>
     <p>
-      House rules are part of the tradition, so exact meanings can vary from one group to another. Some groups replace Jack with Make a Rule, change the rules for 5 and 6, or use a challenge bowl instead of a mixed center cup. The important part is agreeing on the deck before the first draw. Explore more <a href="/kings-cup-variations/">variations</a>, read the full <a href="/how-to-play-kings-cup/">how-to-play guide</a>, or start the game instantly below.
+      House rules are part of the tradition, so exact meanings can vary from one group to another. Some groups replace Jack with Make a Rule, change the rules for 5 and 6, or use a challenge bowl instead of a mixed center cup. The important part is agreeing on the deck before the first draw. Explore more <a href="/kings-cup-variations/">variations</a>, read the full <a href="/kings-cup-rules/#how-to-play">how-to-play guide</a>, or start the game instantly below.
     </p>
-    <button class="btn-primary" onclick="openGame('home')">▶ Play Free Now</button>
+    <button class="btn-primary" onclick="openGame('version')">▶ Play Free Now</button>
   </div>
 </section>
 
@@ -907,7 +1152,7 @@ footer {
     </p>
     <p class="rules-intro">
       New to the game? Start with our complete <a href="/kings-cup-card-game/"><strong>Kings Cup card game</strong></a>
-      guide, learn the <a href="/kings-cup-drinking-game/"><strong>King's Cup drinking game</strong></a>, scan all <a href="/kings-cup-cards/"><strong>King's Cup card meanings</strong></a>, then keep the dedicated
+      guide, learn the <a href="/kings-cup-rules/#how-to-play"><strong>King's Cup drinking game</strong></a>, scan all <a href="/kings-cup-cards/"><strong>King's Cup card meanings</strong></a>, then keep the dedicated
       <a href="/kings-cup-rules/"><strong>Kings Cup rules</strong></a> reference open while you play. You can also explore
       <a href="/kings-cup-variations/">King's Cup variations</a> or build a custom deck with the
       <a href="/kings-cup-rule-generator/">rule generator</a>.
@@ -948,56 +1193,9 @@ footer {
 </section>
 
 <!-- ════════════════════════════════
-     GAME VERSIONS
-════════════════════════════════ -->
-<section class="section" id="versions">
-  <div class="container">
-    <span class="section-label">5 Game Modes</span>
-    <h2 class="section-title">Choose Your Kings Cup Version</h2>
-    <p class="section-sub">
-      Not all parties are the same — so we built five distinct versions of the game.
-      Each mode keeps the same 54-card structure but swaps in rules tailored
-      to your crowd.
-    </p>
-    <div class="versions-grid">
-      <div class="ver-card" onclick="openGame('version', 'classic')">
-        <span class="ver-icon">🃏</span>
-        <div class="ver-name">Classic</div>
-        <p class="ver-desc">The original Ring of Fire rules everyone knows. The perfect starting point for any game night.</p>
-        <span class="ver-badge">Most Popular</span>
-      </div>
-      <div class="ver-card" onclick="openGame('version', 'funny')">
-        <span class="ver-icon">🤣</span>
-        <div class="ver-name">Funny</div>
-        <p class="ver-desc">Silly accents, animal impressions, mime challenges. Great for groups who want a laugh above all else.</p>
-        <span class="ver-badge">Comedy Mode</span>
-      </div>
-      <div class="ver-card" onclick="openGame('version', 'college')">
-        <span class="ver-icon">🎓</span>
-        <div class="ver-name">College</div>
-        <p class="ver-desc">More intense rules with Thumb Master, Give 2/Take 3, and hard Waterfall for experienced players.</p>
-        <span class="ver-badge">Hardcore</span>
-      </div>
-      <div class="ver-card" onclick="openGame('version', 'couples')">
-        <span class="ver-icon">💑</span>
-        <div class="ver-name">Couples</div>
-        <p class="ver-desc">Kiss or drink, stare contests, couple's bets and more. The ultimate version for date night.</p>
-        <span class="ver-badge">Date Night</span>
-      </div>
-      <div class="ver-card" onclick="openGame('version', 'family')">
-        <span class="ver-icon">👨‍👩‍👧</span>
-        <div class="ver-name">Family</div>
-        <p class="ver-desc">No alcohol needed — dances, jumping jacks, jokes and group dares replace all drinking rules.</p>
-        <span class="ver-badge">All Ages</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════
      TIPS
 ════════════════════════════════ -->
-<section class="section section--tint" id="tips">
+<section class="section" id="tips">
   <div class="container">
     <span class="section-label">Pro Tips</span>
     <h2 class="section-title">Kings Cup Tips for a Great Game</h2>
@@ -1044,7 +1242,7 @@ footer {
 <!-- ════════════════════════════════
      FAQ
 ════════════════════════════════ -->
-<section class="section" id="faq">
+<section class="section section--tint" id="faq">
   <div class="container">
     <span class="section-label">FAQ</span>
     <h2 class="section-title">Kings Cup FAQ</h2>
@@ -1102,7 +1300,7 @@ footer {
           Is Kings Cup Online free? Do I need to sign up? <span class="faq-icon">+</span>
         </button>
         <div class="faq-a">
-          It's completely free to play with no signup, no download, and no app install required. Just open it in your browser and hit "Play Free Now." It works on iPhone, Android, tablets, and desktop computers.
+          It's completely free to play with no signup, no download, and no app install required. Just open it in your browser and tap "Start Game." It works on iPhone, Android, tablets, and desktop computers.
         </div>
       </div>
     </div>
@@ -1116,7 +1314,7 @@ footer {
 <section class="cta-banner">
   <h2>Ready to Play? It's Free.</h2>
   <p>No download, no signup — just tap and start your Kings Cup game right now.</p>
-  <button class="btn-primary" onclick="openGame('home')" style="font-size:1.1rem; padding:17px 44px;">
+  <button class="btn-primary" onclick="openGame('version')" style="font-size:1.1rem; padding:17px 44px;">
     ▶ Start Playing Now
   </button>
 </section>
@@ -1147,7 +1345,7 @@ footer {
         <div class="footer-tagline">Free drinking card game — play anywhere, no download needed.</div>
       </div>
       <div class="footer-links">
-        <a href="/how-to-play-kings-cup/">How to Play</a>
+        <a href="/kings-cup-rules/#how-to-play">How to Play</a>
         <a href="/kings-cup-card-game/">Kings Cup Card Game</a>
         <a href="/kings-cup-cards/">Card Meanings</a>
         <a href="/kings-cup-rules/">Kings Cup Rules</a>
@@ -1244,123 +1442,6 @@ footer {
   </div>
 </footer>
 
-
-<!-- ════════════════════════════════
-     GAME OVERLAY (fullscreen modal)
-════════════════════════════════ -->
-<div class="game-overlay" id="game-overlay">
-  <button class="game-close" onclick="closeGame()" title="Exit Game">✕</button>
-
-  <!-- Game: Home -->
-  <div class="gscreen g-home" id="gs-home">
-    <div class="g-crown">👑</div>
-    <div class="g-title">Kings Cup</div>
-    <p class="g-online">Online</p>
-    <p class="g-tagline">The classic party card game</p>
-    <button class="g-btn-gold" onclick="gShowScreen('version')" style="color:#1a1a00;">Start Game</button>
-  </div>
-
-  <!-- Game: Version select -->
-  <div class="gscreen g-version-bg" id="gs-version">
-    <div class="g-top-bar">
-      <button class="g-back-btn" onclick="gShowScreen('home')">←</button>
-      <span class="g-heading">Choose Version</span>
-    </div>
-    <div class="g-vlist" id="g-vlist"></div>
-    <div class="g-play-wrap">
-      <button class="g-btn-gold" onclick="gShowScreen('players')" style="width:100%;color:#1a1a00;">Let's Play →</button>
-    </div>
-  </div>
-
-  <!-- Game: Players setup -->
-  <div class="gscreen g-players-bg" id="gs-players">
-    <div class="g-top-bar">
-      <button class="g-back-btn" onclick="gShowScreen('version')">←</button>
-      <span class="g-heading">Who's Playing?</span>
-    </div>
-    <div class="g-players-list" id="g-players-list"></div>
-    <button class="g-add-btn" onclick="addPlayer()">＋ Add Player</button>
-    <div class="g-play-wrap">
-      <button class="g-btn-gold" onclick="startGame()" style="width:100%;color:#1a1a00;">▶ Start Game</button>
-    </div>
-  </div>
-
-  <!-- Game: Main -->
-  <div class="gscreen g-main-bg" id="gs-main">
-    <div class="g-header">
-      <div class="g-hr1">
-        <span class="g-turn" id="g-turn">👤 Player 1's turn</span>
-        <div class="g-actions">
-          <button class="g-icon-btn" id="sound-btn" onclick="toggleSound()" title="Sound">🔊</button>
-          <button class="g-icon-btn" onclick="openTimerSheet()" title="Timer">⏱</button>
-          <button class="g-icon-btn" onclick="openGMenu()">☰</button>
-        </div>
-      </div>
-      <div class="g-hr2">
-        <div class="kings-row">
-          <span class="k-icon" id="k1">♛</span>
-          <span class="k-icon" id="k2">♛</span>
-          <span class="k-icon" id="k3">♛</span>
-          <span class="k-icon" id="k4">♛</span>
-        </div>
-        <span class="g-rem" id="grem">54 cards left</span>
-      </div>
-    </div>
-    <div class="card-area">
-      <div class="card-wrap">
-        <div class="gcard" id="gcard">
-          <div class="card-face c-back">
-            <div class="c-back-inner">
-              <span class="c-back-crown">♛</span>
-              <span class="c-back-text">Kings Cup</span>
-            </div>
-          </div>
-          <div class="card-face c-front">
-            <div class="gcard-corner">
-              <span class="cv" id="cv-tl">A</span>
-              <span class="cs" id="cs-tl">♠</span>
-            </div>
-            <div class="card-mid">
-              <span class="big-suit" id="big-suit">♠</span>
-              <span class="rule-badge" id="rule-badge">WATERFALL</span>
-              <span class="rule-name"  id="rule-name">Waterfall</span>
-              <span class="rule-desc"  id="rule-desc">Everyone starts drinking at the same time.</span>
-            </div>
-            <div class="gcard-corner br">
-              <span class="cv" id="cv-br">A</span>
-              <span class="cs" id="cs-br">♠</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="draw-area">
-      <button class="draw-btn" onclick="drawCard()">Draw Card 🃏</button>
-      <p class="draw-hint" id="draw-hint">Tap to draw the first card</p>
-    </div>
-  </div>
-
-  <!-- Game: Over -->
-  <div class="gscreen g-over-bg" id="gs-over">
-    <div class="go-emoji">🎉</div>
-    <div class="go-title">Game Over!</div>
-    <p class="go-sub">All cards drawn.<br>Hope everyone had a great time!</p>
-    <div class="go-btns">
-      <button class="g-btn-gold" onclick="startGame()" style="color:#1a1a00;">Play Again</button>
-      <button class="g-btn-ghost" onclick="gShowScreen('version')">Change Version</button>
-      <button class="g-btn-ghost" onclick="closeGame()">Back to Website</button>
-    </div>
-  </div>
-</div>
-
-<!-- Timer: floating countdown ring (inside game-overlay) -->
-<div class="timer-display" id="timer-display" onclick="stopTimer()">
-  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle class="timer-ring-bg" cx="50" cy="50" r="42"/>
-    <circle class="timer-circle" id="timer-circle" cx="50" cy="50" r="42"/>
-  </svg>
-  <span class="timer-num" id="timer-num">30</span>
-</div>
 
 <!-- Timer: config sheet -->
 <div class="g-overlay" id="timer-overlay" onclick="timerOverlayClick(event)">
@@ -1525,18 +1606,32 @@ let G = {
 /* ──────────────────────────────────
    OVERLAY HELPERS
 ────────────────────────────────── */
+const isSmallScreen = () => window.matchMedia('(max-width: 700px)').matches;
+
+function enterFullscreen() {
+  document.getElementById('game-overlay').classList.add('fullscreen');
+  document.body.style.overflow = 'hidden';
+}
+function exitFullscreen() {
+  document.getElementById('game-overlay').classList.remove('fullscreen');
+  document.body.style.overflow = '';
+}
+function toggleFullscreen() {
+  document.getElementById('game-overlay').classList.contains('fullscreen') ? exitFullscreen() : enterFullscreen();
+}
+/* Deep-page CTAs: jump to the stage (inline on desktop, fullscreen on phones) */
 function openGame(screen, version) {
   if (version) { G.version = version; }
-  document.getElementById('game-overlay').classList.add('active');
-  document.body.style.overflow = 'hidden';
   gRenderVersions();
   gShowScreen(screen);
+  if (isSmallScreen()) { enterFullscreen(); }
+  else { document.getElementById('game-stage').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
 }
 function closeGame() {
-  document.getElementById('game-overlay').classList.remove('active');
-  document.body.style.overflow = '';
+  exitFullscreen();
   stopTimer();
 }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') exitFullscreen(); });
 
 /* ──────────────────────────────────
    GAME SCREENS
@@ -1544,7 +1639,10 @@ function closeGame() {
 function gShowScreen(id) {
   document.querySelectorAll('.gscreen').forEach(s => s.classList.remove('active'));
   document.getElementById('gs-' + id).classList.add('active');
+  document.getElementById('game-overlay').dataset.screen = id;
   if (id === 'players') renderPlayerSetup();
+  // Phones: the inline frame is cramped once play starts, so go fullscreen (the old overlay UX)
+  if (id !== 'home' && isSmallScreen()) enterFullscreen();
 }
 
 /* ──────────────────────────────────

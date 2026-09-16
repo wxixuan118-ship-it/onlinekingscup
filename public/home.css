@@ -713,3 +713,12 @@ footer {
 .timer-btns { display:flex; gap:8px; }
 
 * { -webkit-tap-highlight-color:transparent; }
+
+/* Hero: exit for rules-intent visitors */
+.hero-rules-link {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  margin: -8px auto 18px;
+}
+.hero-rules-link a { color: #ffd76a; text-decoration: underline; text-underline-offset: 3px; }
+.hero-rules-link a:hover { color: #fff; }

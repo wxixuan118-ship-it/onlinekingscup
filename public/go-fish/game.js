@@ -37,7 +37,17 @@
 
   var G = null;          // game state
   var sel = { rank: null, target: null };
-  var timer = null;
+  var timer = null;      // pending turn step; while set, the board is "between moves" and ignores input
+
+  function schedule(fn, ms) {
+    clearPending();
+    timer = setTimeout(function () { timer = null; fn(); }, ms);
+    render();
+  }
+  function clearPending() {
+    if (!timer) return;
+    clearTimeout(timer); timer = null;
+  }
 
   /* ---------- helpers ---------- */
   function plural(rank) {
@@ -108,7 +118,7 @@
 
   /* ---------- game setup ---------- */
   function newGame(numPlayers, luckyFish) {
-    if (timer) { clearTimeout(timer); timer = null; }
+    clearPending();
     var deck = [];
     for (var s = 0; s < 4; s++) for (var r = 0; r < 13; r++) deck.push({ rank: RANKS[r], suit: SUITS[s] });
     shuffle(deck);
@@ -170,7 +180,7 @@
       render();
     } else {
       render();
-      timer = setTimeout(botTurn, BOT_DELAY);
+      schedule(botTurn, BOT_DELAY);
     }
   }
 
@@ -206,7 +216,7 @@
       render();
       if (checkGameOver()) return;
       if (asker.human) { sel.rank = null; if (G.players.length > 2) sel.target = null; startTurn(); }
-      else timer = setTimeout(startTurn, BOT_DELAY);
+      else schedule(startTurn, BOT_DELAY);
       return;
     }
 
@@ -217,7 +227,7 @@
     if (!G.stock.length) {
       say(target.name + ' say' + (target.human ? '' : 's') + ' “Go Fish!” — but the pond is empty. Next player.');
       render();
-      if (asker.human) timer = setTimeout(nextPlayer, 700); else timer = setTimeout(nextPlayer, BOT_DELAY);
+      if (asker.human) schedule(nextPlayer, 700); else schedule(nextPlayer, BOT_DELAY);
       return;
     }
     var drawn = G.stock.pop();
@@ -245,9 +255,9 @@
     if (checkGameOver()) return;
     if (lucky) {
       if (asker.human) { sel.rank = null; if (G.players.length > 2) sel.target = null; startTurn(); }
-      else timer = setTimeout(startTurn, BOT_DELAY);
+      else schedule(startTurn, BOT_DELAY);
     } else {
-      timer = setTimeout(nextPlayer, asker.human ? 900 : BOT_DELAY);
+      schedule(nextPlayer, asker.human ? 900 : BOT_DELAY);
     }
   }
 
@@ -274,7 +284,7 @@
     var done = totalBooks() === 13 || (!G.stock.length && cardsInHands === 0) || (!G.stock.length && G.idle >= G.players.length * 3);
     if (!done) return false;
     G.over = true;
-    if (timer) { clearTimeout(timer); timer = null; }
+    clearPending();
 
     var best = 0;
     for (var j = 0; j < G.players.length; j++) if (G.players[j].books.length > best) best = G.players[j].books.length;
@@ -337,10 +347,12 @@
     return books.map(function (r) { return '<span class="gf-book" title="Book of ' + plural(r) + '">' + r + '<small>×4</small></span>'; }).join('');
   }
 
+  function humanCanAct() { return !!G && !G.over && G.current === 0 && !timer; }
+
   function render() {
     if (!G) return;
     var you = G.players[0];
-    var humanTurn = !G.over && G.current === 0;
+    var humanTurn = humanCanAct();
 
     // opponents
     var html = '';
@@ -373,11 +385,11 @@
 
   function updateAskButton() {
     if (!G) return;
-    var humanTurn = !G.over && G.current === 0;
+    var humanTurn = humanCanAct();
     var ready = humanTurn && sel.rank && sel.target !== null && sel.target !== undefined;
     el.askBtn.disabled = !ready;
     if (!humanTurn) {
-      el.askBtn.textContent = G.over ? 'Game over' : G.players[G.current].name + ' is thinking…';
+      el.askBtn.textContent = G.over ? 'Game over' : G.current === 0 ? 'Go Fish…' : G.players[G.current].name + ' is thinking…';
       el.hint.textContent = '';
     } else if (!sel.rank) {
       el.askBtn.textContent = 'Ask for a rank';
@@ -406,19 +418,19 @@
   /* ---------- events ---------- */
   el.hand.addEventListener('click', function (e) {
     var card = e.target.closest('.gf-card');
-    if (!card || !G || G.over || G.current !== 0) return;
+    if (!card || !humanCanAct()) return;
     sel.rank = sel.rank === card.dataset.rank ? null : card.dataset.rank;
     render();
   });
   el.opponents.addEventListener('click', function (e) {
     var opp = e.target.closest('.gf-opp');
-    if (!opp || !G || G.over || G.current !== 0 || G.players.length === 2) return;
+    if (!opp || !humanCanAct() || G.players.length === 2) return;
     var idx = Number(opp.dataset.idx);
     sel.target = sel.target === idx ? null : idx;
     render();
   });
   el.askBtn.addEventListener('click', function () {
-    if (!G || G.over || G.current !== 0 || !sel.rank || sel.target === null || sel.target === undefined) return;
+    if (!humanCanAct() || !sel.rank || sel.target === null || sel.target === undefined) return;
     var rank = sel.rank, target = sel.target;
     sel.rank = null;
     ask(0, target, rank);
@@ -431,7 +443,7 @@
   });
   document.addEventListener('click', function (e) {
     if (e.target.closest('[data-gf="restart"]')) {
-      if (timer) { clearTimeout(timer); timer = null; }
+      clearPending();
       G = null;
       el.overlay.hidden = true;
       el.board.hidden = true;

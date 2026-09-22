@@ -1,0 +1,7 @@
+# Retired pages consolidated into the homepage and the rules page (301, permanent).
+/kings-cup-card-game/       /                    301
+/kings-cup-card-game        /                    301
+/kings-cup-variations/      /kings-cup-rules/    301
+/kings-cup-variations       /kings-cup-rules/    301
+/kings-cup-drinking-game/   /kings-cup-rules/    301
+/kings-cup-drinking-game    /kings-cup-rules/    301

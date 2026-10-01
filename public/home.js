@@ -513,3 +513,12 @@ gRenderVersions();
   });
   sync();
 })();
+
+/* Game-over app card: hidden on iOS (no iOS app yet). The download bar lives in /app-bar.js. */
+(function () {
+  var ua = navigator.userAgent;
+  if (/Android/i.test(ua)) return;
+  if (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+    document.documentElement.classList.add('is-ios');
+  }
+})();

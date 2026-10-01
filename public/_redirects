@@ -5,3 +5,9 @@
 /kings-cup-variations       /kings-cup-rules/    301
 /kings-cup-drinking-game/   /kings-cup-rules/    301
 /kings-cup-drinking-game    /kings-cup-rules/    301
+
+# PartyDeck presale retired; the App page is now the Google Play download page (301, permanent).
+/party-games-presale.html   /kings-cup-app/      301
+/party-games-presale        /kings-cup-app/      301
+/partydeck-waitlist.html    /kings-cup-app/      301
+/partydeck-waitlist         /kings-cup-app/      301

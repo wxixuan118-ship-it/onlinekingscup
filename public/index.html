@@ -33,7 +33,7 @@
 
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Kings Cup Online","url":"https://www.onlinekingscup.com/","description":"Free online Kings Cup drinking card game. 5 game modes, 54-card deck, complete rules. No download or signup required.","applicationCategory":"GameApplication","operatingSystem":"Any Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"genre":["Card Game","Party Game","Drinking Game"]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Kings Cup?","acceptedAnswer":{"@type":"Answer","text":"Kings Cup (also known as Ring of Fire, Circle of Death, or Waterfall) is one of the most popular party card games in the world. Players sit in a circle and take turns drawing cards from a face-down deck. Each card has a corresponding rule — follow it or face the consequences. The game builds toward a dramatic finale when someone draws the 4th King and must drink the central \"King's Cup.\""}},{"@type":"Question","name":"How many players do you need?","acceptedAnswer":{"@type":"Answer","text":"It works with as few as 2 players, but is best with 4–8 players. The more people at the table, the more chaotic and hilarious the social rules become — especially Never Have I Ever, Rhyme, and Categories."}},{"@type":"Question","name":"Do I need alcohol to play?","acceptedAnswer":{"@type":"Answer","text":"Not at all! It's just as fun with soda, juice, water, or any non-alcoholic beverage. Our Family version replaces all \"drink\" rules with physical challenges like jumping jacks, push-ups, and silly dances — making it suitable for all ages."}},{"@type":"Question","name":"What exactly is the King's Cup?","acceptedAnswer":{"@type":"Answer","text":"In the traditional game, a large cup is placed in the center of the table. Every time a King card is drawn, that player pours some of their drink into the central cup. The player who draws the 4th and final King must drink the entire mixed cup — whatever's in it. In our online version, the King counter (♛♛♛♛) at the top of the screen tracks this for you."}},{"@type":"Question","name":"Can I play Kings Cup online with friends remotely?","acceptedAnswer":{"@type":"Answer","text":"Yes! Share your screen via Zoom, FaceTime, Google Meet, or Discord, then one person taps \"Draw Card\" each turn. Everyone can see the card and rule on screen. It works great for virtual parties and online game nights."}},{"@type":"Question","name":"What's the difference between Kings Cup, Ring of Fire, and Circle of Death?","acceptedAnswer":{"@type":"Answer","text":"They're all the same game with slightly different regional names! \"Kings Cup\" is most common in North America, \"Ring of Fire\" is popular in the UK, and \"Circle of Death\" is another common name. The core rules are nearly identical — a deck of cards, one rule per card value, and a central cup filled by King draws."}},{"@type":"Question","name":"Is Kings Cup Online free? Do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"It's completely free to play with no signup, no download, and no app install required. Just open it in your browser and tap \"Start Game.\" It works on iPhone, Android, tablets, and desktop computers."}}]}]</script>
 
-<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" href="/home.css?v=20261001">
 <link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"></head>
 <body>
 
@@ -187,6 +187,10 @@
             <button class="g-btn-ghost" onclick="gShowScreen('version')">Change Version</button>
             <button class="g-btn-ghost" onclick="closeGame(); gShowScreen('home')">Back to Website</button>
           </div>
+          <a class="go-app" id="go-app" href="https://play.google.com/store/apps/details?id=com.onlinekingscup.app" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','app_store_click',{store:'google_play',placement:'game-over'})">
+            <span>📲 No signal next time? Get the free Android app — plays offline.</span>
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="215" height="83" loading="lazy">
+          </a>
         </div>
       
         <!-- Timer: floating countdown ring -->
@@ -546,18 +550,15 @@
   </button>
 </section>
 
-<!-- PartyDeck is intentionally placed after the primary Kings Cup journey. -->
-<section class="presale-banner" aria-labelledby="partydeck-title">
+<!-- The Android app is intentionally placed after the primary Kings Cup journey. -->
+<section class="presale-banner" aria-labelledby="app-title">
   <div class="presale-card">
     <div>
-      <div class="presale-kicker">New · Founding player presale</div>
-      <p class="presale-title" id="partydeck-title">Meet PartyDeck: every party game in one app.</p>
-      <p>This game plus Never Have I Ever, Most Likely To, Charades, Trivia, Quickfire, and more—built for instant play with any group.</p>
+      <div class="presale-kicker">Free on Google Play · Android</div>
+      <p class="presale-title" id="app-title">Take Kings Cup offline with the Android app.</p>
+      <p>Same 5 modes and 54-card deck, no signal needed. No account, no ads. <a href="/kings-cup-app/" style="color:#ffd84d">See what's in the app</a>.</p>
     </div>
-    <a class="presale-link" href="partydeck-waitlist.html">Join the presale →</a>
-  </div>
-  <div class="typeform-home">
-    <div data-tf-widget="MAypwAgg" data-tf-opacity="100" data-tf-iframe-props="title=PartyDeck Presale Early Access" data-tf-medium="snippet" style="width:100%;height:560px;"></div>
+    <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.onlinekingscup.app" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','app_store_click',{store:'google_play',placement:'home-banner'})"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="215" height="83" loading="lazy" style="height:64px;width:auto;display:block"></a>
   </div>
 </section>
 
@@ -578,7 +579,7 @@
         <a href="/kings-cup-questions/">Kings Cup Questions</a>
         <a href="/beer-pong/">Beer Pong Rules</a>
         <a href="/go-fish/">Go Fish Card Game</a>
-        <a href="party-games-presale.html">PartyDeck Presale</a>
+        <a href="/kings-cup-app/">Android App</a>
         <a href="partners.html">Partners</a>
         <a href="about.html">About</a>
         <a href="privacy-policy.html">Privacy Policy</a>
@@ -701,7 +702,7 @@
 <div class="g-toast" id="g-toast"></div>
 
 
-<script src="/home.js"></script>
-<script src="https://embed.typeform.com/next/embed.js"></script>
+<script src="/home.js?v=20261001"></script>
+<script src="/app-bar.js?v=20261001" defer></script>
 </body>
 </html>

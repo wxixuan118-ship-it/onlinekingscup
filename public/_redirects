@@ -11,3 +11,9 @@
 /party-games-presale        /kings-cup-app/      301
 /partydeck-waitlist.html    /kings-cup-app/      301
 /partydeck-waitlist         /kings-cup-app/      301
+
+# Retired duplicates that used noindex + canonical; now plain 301s (files removed).
+/ring-of-fire-rules.html          /ring-of-fire-rules/  301
+/how-to-play-kings-cup/           /kings-cup-rules/     301
+/how-to-play-kings-cup            /kings-cup-rules/     301
+/rules-for-kings-cup-game.html    /kings-cup-rules/     301

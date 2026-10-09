@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
     <loc>https://www.onlinekingscup.com/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -14,9 +15,12 @@
 
   <url>
     <loc>https://www.onlinekingscup.com/kings-cup-rules/</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.onlinekingscup.com/images/kings-cup-rules-cheat-sheet.png</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -53,9 +57,12 @@
 
   <url>
     <loc>https://www.onlinekingscup.com/ring-of-fire-rules/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.onlinekingscup.com/images/kings-cup-rules-cheat-sheet.png</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -137,9 +144,12 @@
 
   <url>
     <loc>https://www.onlinekingscup.com/rules/10/</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.onlinekingscup.com/images/kings-cup-10-rule.png</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -151,16 +161,22 @@
 
   <url>
     <loc>https://www.onlinekingscup.com/rules/queen/</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.onlinekingscup.com/images/kings-cup-queen-rule.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://www.onlinekingscup.com/rules/king/</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.onlinekingscup.com/images/kings-cup-king-rule.png</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -222,7 +238,7 @@
 
   <url>
     <loc>https://www.onlinekingscup.com/beer-pong/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
